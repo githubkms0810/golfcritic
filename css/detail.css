@@ -1,0 +1,734 @@
+@charset "UTF-8";
+@import url("reset.css");
+@import url("common.css");
+/*******************************************************************
+	* 디테일비주얼 
+*******************************************************************/
+.mainVisual {
+  width: 100%;
+  height: 370px;
+  margin: 0 auto;
+  background: url("../images/main_visual_01.png") no-repeat 0/cover;
+}
+
+.mainVisual .visualContents {
+  width: 100%;
+  height: 100%;
+  background: rgba(38, 38, 38, 0.85);
+}
+
+.mainVisual .visualContents .visualContentsWrap {
+  width: 1150px;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.mainVisual .visualContents .visualContentsWrap > .contentBox {
+  position: absolute;
+  bottom: 0;
+}
+
+.mainVisual .visualContents .visualContentsWrap > .contentBox > div {
+  float: left;
+}
+
+.mainVisual .visualContents .visualContentsWrap > .contentBox > .imgBox {
+  width: 300px;
+  margin-right: 30px;
+}
+
+.mainVisual .visualContents .visualContentsWrap > .contentBox > .imgBox img {
+  vertical-align: top;
+}
+
+.mainVisual .visualContents .visualContentsWrap > .contentBox > .textBox {
+  width: 800px;
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+.mainVisual .visualContents .visualContentsWrap > .contentBox > .textBox > ul > li {
+  padding: 0 20px;
+  float: left;
+}
+
+.mainVisual .visualContents .visualContentsWrap > .contentBox > .textBox > ul > li:first-child {
+  padding-left: 0;
+}
+
+.mainVisual .visualContents .visualContentsWrap > .contentBox > .textBox > ul > li:nth-child(2) {
+  border-left: solid 1px #fff;
+  border-right: solid 1px #fff;
+}
+
+.mainVisual .visualContents .visualContentsWrap > .contentBox > .textBox > h2 {
+  font-size: 3.8rem;
+}
+
+.mainVisual .visualContents .visualContentsWrap > .contentBox > .textBox > h2 span {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: normal;
+}
+
+.mainVisual .visualContents .visualContentsWrap > .contentBox > .textBox > p {
+  font-size: 1.4rem;
+  margin: 20px 0 15px;
+}
+
+.mainVisual .visualContents .visualContentsWrap > .contentBox > .buttonBox > ul > li {
+  float: left;
+  width: 100px;
+  line-height: 30px;
+  border-radius: 5px;
+  text-align: center;
+  border: solid 2px #fff;
+  box-sizing: border-box;
+}
+
+.mainVisual .visualContents .visualContentsWrap > .contentBox > .buttonBox > ul > li.likeBtn {
+  background: #fff;
+  margin-right: 5px;
+}
+
+.mainVisual .visualContents .visualContentsWrap > .contentBox > .buttonBox > ul > li.likeBtn a {
+  color: #111;
+  font-size: 1.3rem;
+}
+
+.mainVisual .visualContents .visualContentsWrap > .contentBox > .buttonBox > ul > li.shareBtn a {
+  color: #fff;
+  font-size: 1.3rem;
+}
+
+.mainVisual .visualContents .visualContentsWrap > .contentBox > .ratingBox {
+  position: absolute;
+  right: 0;
+}
+
+.mainVisual .visualContents .visualContentsWrap > .contentBox > .ratingBox > ul > li {
+  height: 20px;
+  line-height: 20px;
+  display: inline-block;
+  margin-left: 15px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+/*******************************************************************
+	* 디테일정보 
+*******************************************************************/
+.greenBg {
+  background: #65cb32;
+  color: #fff;
+}
+
+.yellowBg {
+  background: #fecb45;
+  color: #fff;
+}
+
+.redBg {
+  background: #fc0c1b;
+  color: #fff;
+}
+
+.blankBg {
+  background: #111111;
+  color: #fff;
+}
+
+.grayBg {
+  background: #cccccc;
+  color: #fff;
+}
+
+.whiteBg {
+  background: #fff;
+}
+
+.googleMap {
+  width: 100%;
+  height: 500px;
+  top: 115px;
+}
+
+.webix_popup {
+  position: absolute;
+  top: 1150px !important;
+  left: 400px !important;
+}
+
+.webix_inp_static {
+  display: none;
+}
+
+.webix_el_colorpicker span.webix_input_icon, .webix_el_combo span.webix_input_icon, .webix_el_datepicker span.webix_input_icon, .webix_el_dbldatepicker span.webix_input_icon, .webix_el_richselect span.webix_input_icon {
+  background-color: transparent !important;
+  color: #adadad;
+}
+
+.contents {
+  background: #e4e6ed;
+}
+
+.contents .contentsWrap {
+  width: 1150px;
+  margin: 0 auto;
+}
+
+.contents .contentsWrap > .rightBox {
+  float: right;
+  width: 290px;
+}
+
+.contents .contentsWrap > .rightBox > div {
+  margin-bottom: 9px;
+}
+
+.contents .contentsWrap > .rightBox .scoreBox ul > li {
+  display: inline-block;
+}
+
+.contents .contentsWrap > .rightBox .scoreBox ul > li dl {
+  font-size: 1.3rem;
+}
+
+.contents .contentsWrap > .rightBox .scoreBox ul > li dl dt {
+  font-weight: bold;
+  color: #111111;
+}
+
+.contents .contentsWrap > .rightBox .scoreBox ul > li dl dd {
+  color: #808080;
+}
+
+.contents .contentsWrap > .rightBox .scoreBox ul > li dl dd strong {
+  color: #111111;
+}
+
+.contents .contentsWrap > .rightBox .grade {
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  font-size: 3.2rem;
+  text-align: center;
+  margin-right: 15px;
+}
+
+.contents .contentsWrap > .rightBox .listHeader {
+  background: #2588be;
+  color: #fff;
+  height: 40px;
+  line-height: 40px;
+  font-size: 1.3rem;
+  text-indent: 15px;
+  position: relative;
+}
+
+.contents .contentsWrap > .rightBox .listHeader > ul {
+  position: absolute;
+  top: 0;
+  right: 15px;
+}
+
+.contents .contentsWrap > .rightBox .listHeader > ul > li {
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  text-indent: 0;
+}
+
+.contents .contentsWrap > .rightBox .listHeader > ul > li.verticalBar {
+  margin: 0 10px;
+}
+
+.contents .contentsWrap > .rightBox > .awards > ul > li {
+  height: 48px;
+  line-height: 48px;
+  font-size: 1.3rem;
+  border-bottom: solid 1px #e6e6e6;
+}
+
+.contents .contentsWrap > .rightBox > .awards > ul > li img {
+  vertical-align: middle;
+  margin: 0 10px 0 15px;
+}
+
+.contents .contentsWrap > .rightBox > .courseRank > ul > li {
+  height: 50px;
+  line-height: 50px;
+  font-size: 1.3rem;
+  position: relative;
+}
+
+.contents .contentsWrap > .rightBox > .courseRank > ul > li:nth-child(even) {
+  background: #fafaff;
+}
+
+.contents .contentsWrap > .rightBox > .courseRank > ul > li .ranking {
+  margin: 0 10px 0 15px;
+}
+
+.contents .contentsWrap > .rightBox > .courseRank > ul > li .score {
+  display: inline-block;
+  text-align: center;
+  border-radius: 2px;
+  width: 22px;
+  height: 22px;
+  line-height: 22px;
+  font-size: 1rem;
+  position: absolute;
+  top: 13px;
+  right: 15px;
+}
+
+.contents .contentsWrap > .rightBox .allSee {
+  height: 40px !important;
+  line-height: 40px !important;
+  border-top: solid 1px #e6e6e6;
+  text-align: center;
+  padding: 0 !important;
+}
+
+.contents .contentsWrap > .rightBox .allSee a {
+  display: block;
+  color: #2588be;
+}
+
+.contents .contentsWrap > .rightBox .goodText > ul > li {
+  font-size: 1.3rem;
+  padding: 20px 15px;
+}
+
+.contents .contentsWrap > .rightBox .goodText > ul > li dd {
+  color: #808080;
+  font-size: 1.2rem;
+}
+
+.contents .contentsWrap > .fieldinfoBox {
+  width: 853px;
+  float: left;
+}
+
+.contents .contentsWrap > .fieldinfoBox > .fieldinfo {
+  background: #eff0f4;
+}
+
+.contents .contentsWrap > .fieldinfoBox > .fieldinfo > ul {
+  margin-left: 30px;
+}
+
+.contents .contentsWrap > .fieldinfoBox > .fieldinfo > ul li {
+  float: left;
+  font-size: 1.2rem;
+  color: #9095a1;
+  margin-right: 50px;
+  padding: 20px 0;
+}
+
+.contents .contentsWrap > .fieldinfoBox > .fieldinfo > ul li span {
+  display: block;
+  color: #3b4458;
+  font-size: 1.8rem;
+}
+
+.contents .contentsWrap > .fieldinfoBox > .fieldinfo > ul li:last-child {
+  margin-right: 0;
+}
+
+.contents .contentsWrap > .fieldinfoBox > .fieldinfo > .chartBox {
+  overflow: hidden;
+}
+
+.contents .contentsWrap > .fieldinfoBox > .fieldinfo > .chartBox .snsChart {
+  width: 400px;
+  height: 400px;
+  margin-top: -20px;
+  margin-left: -15px;
+  float: left;
+}
+
+.contents .contentsWrap > .fieldinfoBox > .fieldinfo > .chartBox .snsChart .zc-ref {
+  display: none;
+}
+
+.contents .contentsWrap > .fieldinfoBox > .fieldinfo > .chartBox .snsValueBox {
+  float: left;
+  width: 450px;
+  margin-top: 15px;
+  font-size: 1.3rem;
+}
+
+.contents .contentsWrap > .fieldinfoBox > .fieldinfo > .chartBox .snsValueBox > li {
+  border-bottom: solid 1px #e6e6e6;
+  padding: 15px;
+}
+
+.contents .contentsWrap > .fieldinfoBox > .fieldinfo > .chartBox .snsValueBox > li .snsProfile {
+  vertical-align: middle;
+}
+
+.contents .contentsWrap > .fieldinfoBox > .fieldinfo > .chartBox .snsValueBox > li dl {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1.3rem;
+  color: #111;
+}
+
+.contents .contentsWrap > .fieldinfoBox > .fieldinfo > .chartBox .snsValueBox > li dl dd {
+  color: #808080;
+}
+
+.contents .contentsWrap > .fieldinfoBox > .fieldinfo > .chartBox .snsValueBox > li dl dd strong {
+  color: #111111;
+}
+
+.contents .contentsWrap > .fieldinfoBox > .fieldinfo > .chartBox .snsValueBox > li.snsScoreBox {
+  height: 100px;
+}
+
+.contents .contentsWrap > .fieldinfoBox > .fieldinfo > .chartBox .snsValueBox > li.snsScoreBox .snsScore {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 1.8rem;
+}
+
+.contents .contentsWrap > .fieldinfoBox > .fieldinfo > .chartBox .snsValueBox > li.snsScoreBox .snsScoreText {
+  display: inline-block;
+  width: 370px;
+  vertical-align: top;
+  margin-left: 10px;
+}
+
+.contents .contentsWrap > .fieldinfoBox > .fieldinfo > .chartBox .snsValueBox > li.likePeople {
+  border: none;
+}
+
+.contents .contentsWrap > .fieldinfoBox > .fieldinfo > .chartBox .snsValueBox > li.likePeople > ul {
+  margin: 15px 0 10px;
+}
+
+.contents .contentsWrap > .fieldinfoBox > .fieldinfo > .chartBox .snsValueBox > li.likePeople > ul > li {
+  float: left;
+  margin-right: 5px;
+}
+
+.contents .contentsWrap > .fieldinfoBox > .fieldinfo > .chartBox .snsValueBox > li.likePeople p {
+  color: #808080;
+}
+
+.contents .contentsWrap > .fieldinfoBox > .fieldinfo > .chartBox .snsValueBox > li.likePeople p strong {
+  color: #111;
+}
+
+.contents .contentsWrap p.boxTitle {
+  height: 40px;
+  line-height: 40px;
+  font-size: 1.3rem;
+  background: #eff0f4;
+  color: #3b4458;
+  text-indent: 20px;
+  border-right: solid 1px #e6e6e6;
+}
+
+.contents .contentsWrap > .commentBox {
+  width: 853px;
+  float: left;
+  margin-top: 9px;
+  background: red;
+}
+
+.contents .contentsWrap > .commentBox .commentBoxWrap {
+  padding: 15px 20px;
+  background: #fff;
+  position: relative;
+}
+
+.contents .contentsWrap > .commentBox .commentBoxWrap .ratingBox > ul > li {
+  height: 20px;
+  line-height: 20px;
+  display: inline-block;
+  margin-right: 15px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.contents .contentsWrap > .commentBox .commentBoxWrap textarea {
+  width: 813px;
+  height: 100px;
+  margin-top: 10px;
+  border: solid 1px #e6e6e6;
+}
+
+.contents .contentsWrap > .commentBox .commentBoxWrap .submitBtn {
+  position: absolute;
+  width: 55px;
+  height: 30px;
+  line-height: 30px;
+  bottom: 15px;
+  right: 13px;
+  background: #2588be;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1.3rem;
+}
+
+.contents .contentsWrap > .commentView {
+  width: 853px;
+  float: left;
+  margin-top: 9px;
+  background: #fff;
+  position: relative;
+}
+
+.contents .contentsWrap > .commentView > div {
+  width: 50%;
+  float: left;
+}
+
+.contents .contentsWrap > .commentView > div .evaluationBox {
+  background: #fff;
+  font-size: 1.4rem;
+  padding: 20px;
+  position: relative;
+  border-bottom: solid 1px #e6e6e6;
+  border-right: solid 1px #e6e6e6;
+}
+
+.contents .contentsWrap > .commentView > div .evaluationBox:nth-of-type(2) {
+  border-right: none;
+}
+
+.contents .contentsWrap > .commentView > div .evaluationBox .likeImg {
+  display: inline-block;
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  margin-right: 8px;
+  text-align: center;
+}
+
+.contents .contentsWrap > .commentView > div .evaluationBox > ul {
+  position: absolute;
+  bottom: 15px;
+  right: 20px;
+}
+
+.contents .contentsWrap > .commentView > div .evaluationBox > ul > li {
+  float: left;
+  position: relative;
+  width: 20px;
+  height: 50px;
+  margin-left: 2px;
+  cursor: pointer;
+}
+
+.contents .contentsWrap > .commentView > div .evaluationBox > ul > li span {
+  position: absolute;
+  bottom: 0;
+  background: #e6e6e6;
+  display: inline-block;
+  width: 100%;
+}
+
+.contents .contentsWrap > .commentView > div .evaluationBox > ul > li span.graph_01 {
+  height: 5px;
+}
+
+.contents .contentsWrap > .commentView > div .evaluationBox > ul > li span.graph_02 {
+  height: 10px;
+}
+
+.contents .contentsWrap > .commentView > div .evaluationBox > ul > li span.graph_03 {
+  height: 20px;
+}
+
+.contents .contentsWrap > .commentView > div .evaluationBox > ul > li span.graph_04 {
+  height: 35px;
+}
+
+.contents .contentsWrap > .commentView > div .evaluationBox > ul > li span.graph_05 {
+  height: 40px;
+}
+
+.contents .contentsWrap > .commentView > div .evaluationBox > ul > li span.graph_06 {
+  height: 30px;
+}
+
+.contents .contentsWrap > .commentView > div .evaluationBox > ul > li span.graph_07 {
+  height: 20px;
+}
+
+.contents .contentsWrap > .commentView .proComment > .evaluationBox ul li:hover span {
+  background: #fecb45;
+}
+
+.contents .contentsWrap > .commentView .normalComment > .evaluationBox ul li:hover span {
+  background: #68c53e;
+}
+
+.contents .contentsWrap > .commentView .viewList {
+  font-size: 1.3rem;
+  color: #111;
+  text-align: justify;
+  background: #fff;
+  border-right: solid 1px #e6e6e6;
+}
+
+.contents .contentsWrap > .commentView .viewList > li {
+  position: relative;
+  padding: 25px 20px;
+}
+
+.contents .contentsWrap > .commentView .viewList > li:nth-child(even) {
+  background: #fafaff;
+}
+
+.contents .contentsWrap > .commentView .viewList > li .commentViewScore {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 1.8rem;
+  border-radius: 5px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.contents .contentsWrap > .commentView .viewList > li .commentViewScore.round {
+  border-radius: 50%;
+}
+
+.contents .contentsWrap > .commentView .viewList > li dl {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.contents .contentsWrap > .commentView .viewList > li dl dt {
+  font-weight: bold;
+}
+
+.contents .contentsWrap > .commentView .viewList > li dl dd {
+  color: #808080;
+}
+
+.contents .contentsWrap > .commentView .viewList > li p {
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.contents .contentsWrap > .commentView .viewList > li .likeBtnBox {
+  position: absolute;
+  top: 40px;
+  right: 20px;
+}
+
+.contents .contentsWrap > .commentView .viewList > li .likeBtnBox img {
+  cursor: pointer;
+}
+
+.contents .contentsWrap > .commentView .viewList > li .commentPhoto > li {
+  float: left;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.contents .contentsWrap > .commentView .allSee {
+  text-align: center;
+  padding: 0px;
+  background: #fff;
+  position: absolute;
+  width: 50%;
+  bottom: -41px;
+  border-top: solid 1px #e6e6e6;
+  border-right: solid 1px #e6e6e6;
+  box-sizing: border-box;
+}
+
+.contents .contentsWrap > .commentView .allSee a {
+  font-size: 1.3rem;
+  display: block;
+  height: 41px;
+  line-height: 41px;
+  color: #2588be;
+}
+
+.contents .contentsWrap > .commentView .normalComment .allSee {
+  border-right: none;
+}
+
+.contents .contentsWrap .reardBox {
+  clear: both;
+  position: relative;
+  top: 76px;
+  width: 853px;
+}
+
+.contents .contentsWrap .reardBox p.regardTitle {
+  font-size: 1.3rem;
+  color: #111;
+  padding-bottom: 14px;
+  margin-bottom: 20px;
+  border-bottom: solid 1px #cdcfd5;
+}
+
+.contents .contentsWrap .reardBox .regardList > li {
+  font-size: 1.2rem;
+  color: #808080;
+}
+
+.contents .contentsWrap .reardBox .regardList > li h3 {
+  font-size: 1.6rem;
+  color: #111;
+}
+
+.contents .contentsWrap .reardBox .regardList > li h3 span {
+  display: block;
+  font-size: 1.2rem;
+  color: #808080;
+  margin: 2px 0 15px;
+  font-weight: normal;
+}
+
+.contents .contentsWrap .reardBox .regardList > li > p {
+  margin-bottom: 30px;
+}
+
+.contents .contentsWrap .reardBox .regardList > li .regardImg {
+  display: inline-block;
+  width: 240px;
+  height: 135px;
+}
+
+.contents .contentsWrap .reardBox .regardList > li .regardMovieText {
+  display: inline-block;
+  width: 580px;
+  vertical-align: top;
+  margin-left: 14px;
+}
+
+.contents .contentsWrap .reardBox .regardList.movie > li {
+  margin-bottom: 6px;
+}
+
+.contents .contentsWrap .reardBox .regardList.photo > li {
+  float: left;
+  margin-right: 7px;
+  margin-bottom: 7px;
+}
+
+.contents .contentsWrap .reardBox .regardList.photo > li:nth-child(10n) {
+  margin-right: 0;
+}
+/*# sourceMappingURL=detail.css.map */
