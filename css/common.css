@@ -1,68 +1,4 @@
 @charset "UTF-8";
-header {
-  width: 100%;
-  height: 80px;
-  margin: 0 auto;
-}
-
-header > h1.logo {
-  float: left;
-  margin: 25px 20px 25px 40px;
-}
-
-header > .serchBox {
-  float: left;
-  height: 30px;
-  border-left: solid 1px #e6e6e6;
-  margin-top: 25px;
-}
-
-header > .serchBox input {
-  border: none;
-  margin-top: 5px;
-  margin-left: 20px;
-  font-size: 1.4rem;
-  width: 250px;
-}
-
-header > .serchBox input::placeholder {
-  color: #d6d6d6;
-}
-
-header > .serchBox input:-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
-  color: #d6d6d6;
-}
-
-header > .serchBox input::-ms-input-placeholder {
-  /* Microsoft Edge */
-  color: #d6d6d6;
-}
-
-header > nav.gnb {
-  float: right;
-  margin: 20px 0;
-}
-
-header > nav.gnb > ul > li {
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 30px;
-  font-size: 1.4rem;
-}
-
-header > nav.gnb > ul > li img {
-  vertical-align: middle;
-}
-
-header > nav.gnb > ul > li .profileImg {
-  margin-right: 10px;
-}
-
-header > nav.gnb > ul > li:last-child {
-  margin-right: 40px;
-}
-
 /* 기본스타일 */
 .displayB {
   display: block;
@@ -86,5 +22,104 @@ header > nav.gnb > ul > li:last-child {
 
 .textRight {
   text-align: right;
+}
+
+header {
+  width: 100%;
+  height: 80px;
+  margin: 0 auto;
+  background: #ffffff;
+}
+
+header .headerWrap {
+  width: 96%;
+  max-width: 1840px;
+  min-width: 1050px;
+  margin: 0 auto;
+}
+
+header .headerWrap > h1.logo {
+  float: left;
+  margin: 25px 20px 20px 0;
+}
+
+header .headerWrap > .serchBox {
+  float: left;
+  width: 30%;
+  height: 30px;
+  border-left: solid 1px #e6e6e6;
+  margin-top: 25px;
+}
+
+header .headerWrap > .serchBox input {
+  border: none;
+  margin-top: 5px;
+  margin-left: 20px;
+  font-size: 1.4rem;
+  width: 100%;
+}
+
+header .headerWrap > .serchBox input::placeholder {
+  color: #d6d6d6;
+}
+
+header .headerWrap > .serchBox input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #d6d6d6;
+}
+
+header .headerWrap > .serchBox input::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #d6d6d6;
+}
+
+header .headerWrap > nav.gnb {
+  float: right;
+  margin: 20px 0;
+}
+
+header .headerWrap > nav.gnb > ul > li {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 30px;
+  font-size: 1.4rem;
+}
+
+header .headerWrap > nav.gnb > ul > li img {
+  vertical-align: middle;
+}
+
+header .headerWrap > nav.gnb > ul > li .profileImg {
+  margin-right: 10px;
+}
+
+header .headerWrap > nav.gnb > ul > li:last-child {
+  margin-right: 0px;
+}
+
+header .headerWrap > nav.gnb > ul > li.mobileMenu {
+  display: none;
+}
+
+/*******************************************************************
+	* 반응형 
+*******************************************************************/
+@media screen and (max-width: 1024px) {
+  header .headerWrap {
+    width: 94%;
+    max-width: 1024px;
+    min-width: 320px;
+    margin: 0 auto;
+  }
+  header .headerWrap nav.gnb ul > li {
+    display: none;
+  }
+  header .headerWrap nav.gnb ul > li.mobileMenu {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  header .headerWrap nav.gnb ul > li:last-child {
+    display: inline-block;
+  }
 }
 /*# sourceMappingURL=common.css.map */

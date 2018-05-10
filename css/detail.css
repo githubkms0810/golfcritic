@@ -1,8 +1,214 @@
 @charset "UTF-8";
-@import url("reset.css");
-@import url("common.css");
 /*******************************************************************
-	* 디테일비주얼 
+	* 글꼴
+*******************************************************************/
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 20;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Noto Sans KR", sans-serif;
+  background: #e4e6ed;
+}
+
+.clearfix::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+/*******************************************************************
+	* 컬러 
+*******************************************************************/
+a {
+  text-decoration: none;
+  color: #111;
+}
+
+img {
+  display: inline-block;
+}
+
+caption {
+  font-size: 0;
+  position: absolute;
+  left: -9999px;
+  width: 0px;
+  height: 0px;
+  line-height: 0px;
+}
+
+/* 기본스타일 */
+.displayB {
+  display: block;
+}
+
+.displayI {
+  display: inline;
+}
+
+.displayIB {
+  display: inline-block;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.textLeft {
+  text-align: left;
+}
+
+.textRight {
+  text-align: right;
+}
+
+header {
+  width: 100%;
+  height: 80px;
+  margin: 0 auto;
+  background: #ffffff;
+}
+
+header .headerWrap {
+  width: 96%;
+  max-width: 1840px;
+  min-width: 1050px;
+  margin: 0 auto;
+}
+
+header .headerWrap > h1.logo {
+  float: left;
+  margin: 25px 20px 20px 0;
+}
+
+header .headerWrap > .serchBox {
+  float: left;
+  width: 30%;
+  height: 30px;
+  border-left: solid 1px #e6e6e6;
+  margin-top: 25px;
+}
+
+header .headerWrap > .serchBox input {
+  border: none;
+  margin-top: 5px;
+  margin-left: 20px;
+  font-size: 1.4rem;
+  width: 100%;
+}
+
+header .headerWrap > .serchBox input::placeholder {
+  color: #d6d6d6;
+}
+
+header .headerWrap > .serchBox input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #d6d6d6;
+}
+
+header .headerWrap > .serchBox input::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #d6d6d6;
+}
+
+header .headerWrap > nav.gnb {
+  float: right;
+  margin: 20px 0;
+}
+
+header .headerWrap > nav.gnb > ul > li {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 30px;
+  font-size: 1.4rem;
+}
+
+header .headerWrap > nav.gnb > ul > li img {
+  vertical-align: middle;
+}
+
+header .headerWrap > nav.gnb > ul > li .profileImg {
+  margin-right: 10px;
+}
+
+header .headerWrap > nav.gnb > ul > li:last-child {
+  margin-right: 0px;
+}
+
+header .headerWrap > nav.gnb > ul > li.mobileMenu {
+  display: none;
+}
+
+/*******************************************************************
+	* 반응형 
+*******************************************************************/
+@media screen and (max-width: 1024px) {
+  header .headerWrap {
+    width: 94%;
+    max-width: 1024px;
+    min-width: 320px;
+    margin: 0 auto;
+  }
+  header .headerWrap nav.gnb ul > li {
+    display: none;
+  }
+  header .headerWrap nav.gnb ul > li.mobileMenu {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  header .headerWrap nav.gnb ul > li:last-child {
+    display: inline-block;
+  }
+}
+
+/*******************************************************************
+	* 디테일비주얼
 *******************************************************************/
 .mainVisual {
   width: 100%;
@@ -39,7 +245,12 @@
 }
 
 .mainVisual .visualContents .visualContentsWrap > .contentBox > .imgBox img {
+  display: inline-block;
   vertical-align: top;
+}
+
+.mainVisual .visualContents .visualContentsWrap > .contentBox > .imgBox img.mbImg {
+  display: none;
 }
 
 .mainVisual .visualContents .visualContentsWrap > .contentBox > .textBox {
@@ -730,5 +941,88 @@
 
 .contents .contentsWrap .reardBox .regardList.photo > li:nth-child(10n) {
   margin-right: 0;
+}
+
+/*******************************************************************
+	* 테블릿 반응형
+*******************************************************************/
+@media screen and (max-width: 1024px) {
+  .mainVisual {
+    height: 1120px;
+  }
+  .mainVisual .visualContents .visualContentsWrap {
+    width: 90%;
+  }
+  .mainVisual .visualContents .visualContentsWrap .contentBox {
+    width: 100%;
+    top: 150px;
+  }
+  .mainVisual .visualContents .visualContentsWrap .contentBox .imgBox {
+    width: 100%;
+  }
+  .mainVisual .visualContents .visualContentsWrap .contentBox .imgBox img {
+    width: 100%;
+    margin-bottom: 15px;
+    height: 730px;
+  }
+  .mainVisual .visualContents .visualContentsWrap .contentBox .imgBox img.mbImg {
+    display: block;
+  }
+  .mainVisual .visualContents .visualContentsWrap .contentBox .imgBox img.pcImg {
+    display: none;
+  }
+  .mainVisual .visualContents .visualContentsWrap .contentBox .textBox {
+    width: 100%;
+    font-size: 1.2rem;
+  }
+  .mainVisual .visualContents .visualContentsWrap .contentBox .textBox > p {
+    font-size: 1.2rem;
+  }
+  .contents .contentsWrap {
+    width: 100%;
+  }
+  .contents .contentsWrap .rightBox {
+    width: 90%;
+    float: none;
+    margin: 0 auto;
+  }
+  .contents .contentsWrap .rightBox .courseRank {
+    display: none;
+  }
+  .contents .contentsWrap .rightBox .goodText {
+    display: none;
+  }
+  .contents .contentsWrap .fieldinfoBox {
+    width: 90%;
+    float: none;
+    margin: 0 auto;
+  }
+  .contents .contentsWrap .commentBox {
+    width: 90%;
+    float: none;
+    margin: 9px auto;
+  }
+  .contents .contentsWrap .commentView {
+    width: 90%;
+    margin: 0 auto;
+    float: none;
+  }
+  .contents .contentsWrap .commentView .proComment {
+    width: 100%;
+    float: none;
+  }
+  .contents .contentsWrap .commentView .normalComment {
+    display: none;
+  }
+  .contents .contentsWrap .commentView .allSee {
+    width: 100%;
+  }
+  .contents .contentsWrap .reardBox {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .contents .contentsWrap .reardBox .regardList > li .regardMovieText {
+    width: 60%;
+  }
 }
 /*# sourceMappingURL=detail.css.map */

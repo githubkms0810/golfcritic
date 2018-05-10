@@ -11,25 +11,25 @@
     <link rel="stylesheet" href="http://cdn.webix.com/edge/webix.css" type="text/css">
     <link rel="stylesheet" href="./css/detail.css">
 
-  
-
-  
 </head>
 <body>
     <!-- 헤더 -->
-    <header class="clearfix">
-        <h1 class="logo"><img src="./images/logo.png" alt="로고"></h1>
-        <div class="serchBox"><input type="text" placeholder="찾고 싶은 골프장을 입력해보세요!"></div>
-        <nav class="gnb">
-            <ul>
-                <li><a href="#">나라별 코스</a></li>
-                <li><a href="#">최근 평가된 코스</a></li>
-                <li><a href="#">코스 순위</a></li>
-                <li><a href="#">랜덤 코스</a></li>
-                <li><a href="#">그늘집</a></li>
-                <li><a href="#"><img class="profileImg" src="images/profile.png" alt="프로필사진"><img src="images/profile_arrow.png" alt=""></a></li>
-            </ul>
-        </nav>
+    <header>
+        <div class="headerWrap clearfix">
+            <h1 class="logo"><img src="./images/logo.png" alt="로고"></h1>
+            <div class="serchBox"><input type="text" placeholder="찾고 싶은 골프장을 입력해보세요!"></div>
+            <nav class="gnb">
+                <ul>
+                    <li><a href="#">나라별 코스</a></li>
+                    <li><a href="#">최근 평가된 코스</a></li>
+                    <li><a href="#">코스 순위</a></li>
+                    <li><a href="#">랜덤 코스</a></li>
+                    <li><a href="#">그늘집</a></li>
+                    <li class="mobileMenu"><a href="#"><img src="./images/mobile/mobile_icon.png" alt=""></a></li>
+                    <li><a href="#"><img class="profileImg" src="images/profile.png" alt="프로필사진"><img src="images/profile_arrow.png" alt=""></a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <!-- 메인비주얼 -->
@@ -38,7 +38,8 @@
             <div class="visualContentsWrap">
                 <div class="contentBox">
                     <div class="imgBox">
-                        <img src="./images/visual_img_01.png" alt="레이크 포레스트 리조트">
+                        <img class="pcImg" src="./images/visual_img_01.png" alt="레이크 포레스트 리조트">
+                        <img class="mbImg" src="./images/mobile/visual_img_01.png" alt="레이크 포레스트 리조트">
                     </div>
                     <div class="textBox">
                         <ul class="clearfix">
