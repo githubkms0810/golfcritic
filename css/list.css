@@ -1,0 +1,360 @@
+@charset "UTF-8";
+/*******************************************************************
+	* 글꼴
+*******************************************************************/
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 20;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Noto Sans KR", sans-serif;
+  background: #e4e6ed;
+}
+
+.clearfix::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+/*******************************************************************
+	* 컬러 
+*******************************************************************/
+a {
+  text-decoration: none;
+  color: #111;
+}
+
+img {
+  display: inline-block;
+}
+
+caption {
+  font-size: 0;
+  position: absolute;
+  left: -9999px;
+  width: 0px;
+  height: 0px;
+  line-height: 0px;
+}
+
+/* 기본스타일 */
+.displayB {
+  display: block;
+}
+
+.displayI {
+  display: inline;
+}
+
+.displayIB {
+  display: inline-block;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.textLeft {
+  text-align: left;
+}
+
+.textRight {
+  text-align: right;
+}
+
+header {
+  width: 100%;
+  height: 80px;
+  margin: 0 auto;
+  background: #ffffff;
+}
+
+header .headerWrap {
+  width: 96%;
+  max-width: 1840px;
+  min-width: 1050px;
+  margin: 0 auto;
+}
+
+header .headerWrap > h1.logo {
+  float: left;
+  margin: 25px 20px 20px 0;
+}
+
+header .headerWrap > .serchBox {
+  float: left;
+  width: 30%;
+  height: 30px;
+  border-left: solid 1px #e6e6e6;
+  margin-top: 25px;
+}
+
+header .headerWrap > .serchBox input {
+  border: none;
+  margin-top: 5px;
+  margin-left: 20px;
+  font-size: 1.4rem;
+  width: 100%;
+}
+
+header .headerWrap > .serchBox input::placeholder {
+  color: #d6d6d6;
+}
+
+header .headerWrap > .serchBox input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #d6d6d6;
+}
+
+header .headerWrap > .serchBox input::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #d6d6d6;
+}
+
+header .headerWrap > nav.gnb {
+  float: right;
+  margin: 20px 0;
+}
+
+header .headerWrap > nav.gnb > ul > li {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 30px;
+  font-size: 1.4rem;
+}
+
+header .headerWrap > nav.gnb > ul > li img {
+  vertical-align: middle;
+}
+
+header .headerWrap > nav.gnb > ul > li .profileImg {
+  margin-right: 10px;
+}
+
+header .headerWrap > nav.gnb > ul > li:last-child {
+  margin-right: 0px;
+}
+
+header .headerWrap > nav.gnb > ul > li.mobileMenu {
+  display: none;
+}
+
+/*******************************************************************
+	* 반응형 
+*******************************************************************/
+@media screen and (max-width: 1024px) {
+  header .headerWrap {
+    width: 94%;
+    max-width: 1024px;
+    min-width: 320px;
+    margin: 0 auto;
+  }
+  header .headerWrap nav.gnb ul > li {
+    display: none;
+  }
+  header .headerWrap nav.gnb ul > li.mobileMenu {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  header .headerWrap nav.gnb ul > li:last-child {
+    display: inline-block;
+  }
+}
+
+html {
+  background: #fff;
+}
+
+.contents {
+  width: 100%;
+  background: url("../images/header_gradation.png") repeat-x;
+}
+
+.contents .listWrap {
+  width: 760px;
+  margin: 0 auto;
+}
+
+.contents .listWrap > .searchBox {
+  padding: 100px 0 30px;
+}
+
+.contents .listWrap > .searchBox > p {
+  float: left;
+  font-size: 1.6rem;
+}
+
+.contents .listWrap > .searchBox > .listSelector {
+  float: right;
+  border-bottom: solid 1px #e0e0e0;
+  padding-bottom: 10px;
+}
+
+.contents .listWrap > .searchBox > .listSelector > ul {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.contents .listWrap > .searchBox > .listSelector > ul li {
+  cursor: pointer;
+  font-size: 1.4rem;
+  color: #2fc141;
+  margin-right: 10px;
+}
+
+.contents .listWrap > .serchList > li {
+  background: #fff;
+  border-radius: 15px;
+  position: relative;
+  margin-bottom: 15px;
+  overflow: hidden;
+  box-shadow: 1px 2px 7px 2px #ededed;
+}
+
+.contents .listWrap > .serchList > li > div.listImgBox {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 20px;
+}
+
+.contents .listWrap > .serchList > li > div.listImgBox img {
+  vertical-align: top;
+}
+
+.contents .listWrap > .serchList > li > dl {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.contents .listWrap > .serchList > li > dl dt {
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.contents .listWrap > .serchList > li > dl dd {
+  font-size: 1.2rem;
+  color: #808080;
+}
+
+.contents .listWrap > .serchList > li > .listGrade {
+  display: inline-block;
+  position: absolute;
+  top: 25px;
+  right: 20px;
+}
+
+.contents .listWrap > .serchList > li > .listGrade > div {
+  float: left;
+  padding: 0 20px;
+  border-left: solid 1px #e6e6e6;
+  height: 35px;
+  line-height: 18px;
+}
+
+.contents .listWrap > .serchList > li > .listGrade > div > ul {
+  margin-left: 10px;
+}
+
+.contents .listWrap > .serchList > li > .listGrade > div > ul > li {
+  margin-left: -10px;
+  float: left;
+}
+
+.contents .listWrap > .serchList > li > .listGrade > div.pointBox > p {
+  font-size: 2rem;
+  color: #111;
+  text-align: center;
+  font-weight: bold;
+}
+
+.contents .listWrap > .serchList > li > .listGrade > div.pointBox > span {
+  font-size: 1.2rem;
+  color: #808080;
+}
+
+.contents .listWrap .pager {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 150px;
+}
+
+.contents .listWrap .pager > ul > li {
+  display: inline-block;
+  vertical-align: middle;
+  color: #666666;
+  font-size: 1.4rem;
+  text-align: center;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.contents .listWrap .pager > ul > li span {
+  display: block;
+  width: 18px;
+  height: 7px;
+  background: #666666;
+  border-radius: 3px;
+  margin-top: 15px;
+}
+
+.contents .listWrap .pager > ul > li.on span {
+  border: solid 7px #666666;
+  background: #fff;
+}
+
+.contents .listWrap .pager > ul > li.prevBtn {
+  vertical-align: bottom;
+  margin-right: 10px;
+}
+
+.contents .listWrap .pager > ul > li.nextBtn {
+  vertical-align: bottom;
+  margin-left: 30px;
+}
+/*# sourceMappingURL=list.css.map */

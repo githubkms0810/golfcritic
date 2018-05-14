@@ -74,7 +74,7 @@
 
                 > .ratingBox {
                     position:absolute;
-                    right:0;
+                    right:0; bottom:195px;
                     > ul > li {
                         height: 20px; line-height: 20px;
                         display: inline-block;
@@ -262,9 +262,8 @@
                         width:400px; height:400px;
                         margin-top:-20px; margin-left:-15px;
                         float:left;
-                        .zc-ref {
-                        display: none;
-                        }
+                        transition:all 1s;
+                        .zc-ref {display: none;}
                     }
                     .snsValueBox {
                         float:left;
@@ -285,7 +284,7 @@
                                 }
                             }
                             &.snsScoreBox {
-                                height:100px;
+                                height:auto;
                                 .snsScore{
                                     display:inline-block;
                                     width:40px; height:40px;
@@ -351,7 +350,7 @@
                     }
                 }
                 textarea {
-                    width:813px; height:100px;
+                    width:100%; height:100px;
                     margin-top:10px;
                     border:solid 1px #e6e6e6;
                 }
@@ -597,6 +596,40 @@
                 width:90%;
                 float:none;
                 margin:0 auto;
+                > .fieldinfo {
+                    > ul {
+                        margin-left:30px;
+                        li {
+                            float:left;
+                            font-size:1.2rem;
+                            color:#9095a1;
+                            margin-right:5%;
+                            padding:20px 0;
+                            span{
+                                display:block;
+                                color:#3b4458;
+                                font-size:1.8rem;
+                            }
+                            &:last-child{ margin-right:0;}
+                        }
+                    }
+                    > .chartBox {
+                        .snsChart{
+                            width: 1000px;
+                            height: 1000px;
+                            margin-top: -100px;
+                            margin-left: -90px;
+                            float:none;
+                        }
+                        .snsValueBox {
+                            float:none;
+                            width:90%; margin:0 auto;
+                            > li.snsScoreBox .snsScoreText {
+                                width:90%;
+                            }
+                        }
+                    }
+                }
             }
             .commentBox{
                 width:90%;
@@ -621,5 +654,147 @@
                 }
             }
         }
+    }
+}
+
+
+/*******************************************************************
+	* 모바일 반응형
+*******************************************************************/
+
+@include mob{
+    .mainVisual {
+        height:1120px;
+        .visualContents{
+            .visualContentsWrap{
+                width:90%;
+                .contentBox{
+                    width:100%;
+                    top:150px;
+                    .imgBox{
+                        width:100%;
+                        img{ 
+                            width:100%;
+                            margin-bottom:15px;
+                            height:730px;
+                            &.mbImg { display:block;}
+                            &.pcImg { display:none;}
+                        }
+                    }
+                    .textBox{
+                        width:100%;
+                        font-size:1rem;
+                        h2 { font-size:2rem;}
+                        > p {
+                            font-size:1.1rem;
+                        }
+                    }
+                    .buttonBox {
+                        > ul {
+                            > li {
+                                width:80px; line-height: 20px;
+                                &.likeBtn a { font-size:1.1rem; }
+                                &.shareBtn a { font-size:1.1rem; }
+                            }
+                        }
+                    }
+                    > .ratingBox {
+                        display:none;
+                    }
+                }
+            }
+        }
+    }
+
+    .contents{
+        .contentsWrap{
+            width:100%;
+            .rightBox{
+                width:90%;
+                float:none;
+                margin:0 auto;
+                .courseRank  { display:none;}
+                .goodText { display:none;}
+            }
+            .fieldinfoBox{
+                width:90%;
+                float:none;
+                margin:0 auto;
+                > .fieldinfo {
+                    > ul { 
+                        margin-left:0;
+                        li { 
+                            font-size:1.1rem;
+                            padding:5%; margin:0;
+                        }
+                    }
+                    > .chartBox {
+                        .snsChart{
+                            width: 100%;
+                            height: 250px;
+                            margin-top: 0px;
+                            margin-left: 0px;
+                            float:none;
+                        }
+                        .snsValueBox {
+                            float:none;
+                            width:90%; margin:0 auto;
+                            > li.snsScoreBox .snsScoreText {
+                                width:75%;
+                            }
+                        }
+                    }
+                }
+            }
+            .commentBox{
+                width:90%;
+                float:none;
+                margin:9px auto;
+            }
+            .commentView {
+                width:90%;
+                margin:0 auto;
+                float:none;
+                .proComment { width:100%; float:none;}
+                .normalComment { display:none;}
+                .allSee { width:100%;}
+            }
+            .reardBox {
+                width:90%;
+                margin:0 auto;
+                .regardList{
+                    >li {
+                        .regardMovieText {
+                            width:100%; margin-left:0;
+                            margin-bottom:10px;
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+
+
+@include mob-small{
+    .contents .contentsWrap > .fieldinfoBox > .fieldinfo > .chartBox .snsValueBox > li.snsScoreBox .snsScore {
+        width:30px; height:30px; line-height: 30px; font-size:1.5rem;
+    }
+    .contents .contentsWrap > .commentView .viewList > li .commentViewScore {
+        width:30px; height:30px; line-height: 30px; font-size:1.5rem;
+    }
+    .contents .contentsWrap > .commentView > div .evaluationBox > ul {
+        position: static;
+    }
+    .contents .contentsWrap > .commentView .viewList > li .likeBtnBox {
+        top:25px;
+    }
+    .contents .contentsWrap .reardBox .regardList > li h3 {
+        font-size:1.3rem;
+        span { font-size:1.1rem; margin:2px 0 5px;}
+    }
+    .contents .contentsWrap .reardBox p.regardTitle { 
+        padding-bottom:5px;
     }
 }

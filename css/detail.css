@@ -316,6 +316,7 @@ header .headerWrap > nav.gnb > ul > li.mobileMenu {
 .mainVisual .visualContents .visualContentsWrap > .contentBox > .ratingBox {
   position: absolute;
   right: 0;
+  bottom: 195px;
 }
 
 .mainVisual .visualContents .visualContentsWrap > .contentBox > .ratingBox > ul > li {
@@ -560,6 +561,7 @@ header .headerWrap > nav.gnb > ul > li.mobileMenu {
   margin-top: -20px;
   margin-left: -15px;
   float: left;
+  transition: all 1s;
 }
 
 .contents .contentsWrap > .fieldinfoBox > .fieldinfo > .chartBox .snsChart .zc-ref {
@@ -598,7 +600,7 @@ header .headerWrap > nav.gnb > ul > li.mobileMenu {
 }
 
 .contents .contentsWrap > .fieldinfoBox > .fieldinfo > .chartBox .snsValueBox > li.snsScoreBox {
-  height: 100px;
+  height: auto;
 }
 
 .contents .contentsWrap > .fieldinfoBox > .fieldinfo > .chartBox .snsValueBox > li.snsScoreBox .snsScore {
@@ -673,7 +675,7 @@ header .headerWrap > nav.gnb > ul > li.mobileMenu {
 }
 
 .contents .contentsWrap > .commentBox .commentBoxWrap textarea {
-  width: 813px;
+  width: 100%;
   height: 100px;
   margin-top: 10px;
   border: solid 1px #e6e6e6;
@@ -997,6 +999,39 @@ header .headerWrap > nav.gnb > ul > li.mobileMenu {
     float: none;
     margin: 0 auto;
   }
+  .contents .contentsWrap .fieldinfoBox > .fieldinfo > ul {
+    margin-left: 30px;
+  }
+  .contents .contentsWrap .fieldinfoBox > .fieldinfo > ul li {
+    float: left;
+    font-size: 1.2rem;
+    color: #9095a1;
+    margin-right: 5%;
+    padding: 20px 0;
+  }
+  .contents .contentsWrap .fieldinfoBox > .fieldinfo > ul li span {
+    display: block;
+    color: #3b4458;
+    font-size: 1.8rem;
+  }
+  .contents .contentsWrap .fieldinfoBox > .fieldinfo > ul li:last-child {
+    margin-right: 0;
+  }
+  .contents .contentsWrap .fieldinfoBox > .fieldinfo > .chartBox .snsChart {
+    width: 1000px;
+    height: 1000px;
+    margin-top: -100px;
+    margin-left: -90px;
+    float: none;
+  }
+  .contents .contentsWrap .fieldinfoBox > .fieldinfo > .chartBox .snsValueBox {
+    float: none;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .contents .contentsWrap .fieldinfoBox > .fieldinfo > .chartBox .snsValueBox > li.snsScoreBox .snsScoreText {
+    width: 90%;
+  }
   .contents .contentsWrap .commentBox {
     width: 90%;
     float: none;
@@ -1023,6 +1058,161 @@ header .headerWrap > nav.gnb > ul > li.mobileMenu {
   }
   .contents .contentsWrap .reardBox .regardList > li .regardMovieText {
     width: 60%;
+  }
+}
+
+/*******************************************************************
+	* 모바일 반응형
+*******************************************************************/
+@media screen and (max-width: 768px) {
+  .mainVisual {
+    height: 1120px;
+  }
+  .mainVisual .visualContents .visualContentsWrap {
+    width: 90%;
+  }
+  .mainVisual .visualContents .visualContentsWrap .contentBox {
+    width: 100%;
+    top: 150px;
+  }
+  .mainVisual .visualContents .visualContentsWrap .contentBox .imgBox {
+    width: 100%;
+  }
+  .mainVisual .visualContents .visualContentsWrap .contentBox .imgBox img {
+    width: 100%;
+    margin-bottom: 15px;
+    height: 730px;
+  }
+  .mainVisual .visualContents .visualContentsWrap .contentBox .imgBox img.mbImg {
+    display: block;
+  }
+  .mainVisual .visualContents .visualContentsWrap .contentBox .imgBox img.pcImg {
+    display: none;
+  }
+  .mainVisual .visualContents .visualContentsWrap .contentBox .textBox {
+    width: 100%;
+    font-size: 1rem;
+  }
+  .mainVisual .visualContents .visualContentsWrap .contentBox .textBox h2 {
+    font-size: 2rem;
+  }
+  .mainVisual .visualContents .visualContentsWrap .contentBox .textBox > p {
+    font-size: 1.1rem;
+  }
+  .mainVisual .visualContents .visualContentsWrap .contentBox .buttonBox > ul > li {
+    width: 80px;
+    line-height: 20px;
+  }
+  .mainVisual .visualContents .visualContentsWrap .contentBox .buttonBox > ul > li.likeBtn a {
+    font-size: 1.1rem;
+  }
+  .mainVisual .visualContents .visualContentsWrap .contentBox .buttonBox > ul > li.shareBtn a {
+    font-size: 1.1rem;
+  }
+  .mainVisual .visualContents .visualContentsWrap .contentBox > .ratingBox {
+    display: none;
+  }
+  .contents .contentsWrap {
+    width: 100%;
+  }
+  .contents .contentsWrap .rightBox {
+    width: 90%;
+    float: none;
+    margin: 0 auto;
+  }
+  .contents .contentsWrap .rightBox .courseRank {
+    display: none;
+  }
+  .contents .contentsWrap .rightBox .goodText {
+    display: none;
+  }
+  .contents .contentsWrap .fieldinfoBox {
+    width: 90%;
+    float: none;
+    margin: 0 auto;
+  }
+  .contents .contentsWrap .fieldinfoBox > .fieldinfo > ul {
+    margin-left: 0;
+  }
+  .contents .contentsWrap .fieldinfoBox > .fieldinfo > ul li {
+    font-size: 1.1rem;
+    padding: 5%;
+    margin: 0;
+  }
+  .contents .contentsWrap .fieldinfoBox > .fieldinfo > .chartBox .snsChart {
+    width: 100%;
+    height: 250px;
+    margin-top: 0px;
+    margin-left: 0px;
+    float: none;
+  }
+  .contents .contentsWrap .fieldinfoBox > .fieldinfo > .chartBox .snsValueBox {
+    float: none;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .contents .contentsWrap .fieldinfoBox > .fieldinfo > .chartBox .snsValueBox > li.snsScoreBox .snsScoreText {
+    width: 75%;
+  }
+  .contents .contentsWrap .commentBox {
+    width: 90%;
+    float: none;
+    margin: 9px auto;
+  }
+  .contents .contentsWrap .commentView {
+    width: 90%;
+    margin: 0 auto;
+    float: none;
+  }
+  .contents .contentsWrap .commentView .proComment {
+    width: 100%;
+    float: none;
+  }
+  .contents .contentsWrap .commentView .normalComment {
+    display: none;
+  }
+  .contents .contentsWrap .commentView .allSee {
+    width: 100%;
+  }
+  .contents .contentsWrap .reardBox {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .contents .contentsWrap .reardBox .regardList > li .regardMovieText {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .contents .contentsWrap > .fieldinfoBox > .fieldinfo > .chartBox .snsValueBox > li.snsScoreBox .snsScore {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 1.5rem;
+  }
+  .contents .contentsWrap > .commentView .viewList > li .commentViewScore {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 1.5rem;
+  }
+  .contents .contentsWrap > .commentView > div .evaluationBox > ul {
+    position: static;
+  }
+  .contents .contentsWrap > .commentView .viewList > li .likeBtnBox {
+    top: 25px;
+  }
+  .contents .contentsWrap .reardBox .regardList > li h3 {
+    font-size: 1.3rem;
+  }
+  .contents .contentsWrap .reardBox .regardList > li h3 span {
+    font-size: 1.1rem;
+    margin: 2px 0 5px;
+  }
+  .contents .contentsWrap .reardBox p.regardTitle {
+    padding-bottom: 5px;
   }
 }
 /*# sourceMappingURL=detail.css.map */
