@@ -1,0 +1,740 @@
+@charset "UTF-8";
+/*******************************************************************
+	* 글꼴
+*******************************************************************/
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 20;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Noto Sans KR", sans-serif;
+  background: #e4e6ed;
+}
+
+.clearfix::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+/*******************************************************************
+	* 컬러 
+*******************************************************************/
+a {
+  text-decoration: none;
+  color: #111;
+}
+
+img {
+  display: inline-block;
+}
+
+caption {
+  font-size: 0;
+  position: absolute;
+  left: -9999px;
+  width: 0px;
+  height: 0px;
+  line-height: 0px;
+}
+
+/* 기본스타일 */
+.displayB {
+  display: block;
+}
+
+.displayI {
+  display: inline;
+}
+
+.displayIB {
+  display: inline-block;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.textLeft {
+  text-align: left;
+}
+
+.textRight {
+  text-align: right;
+}
+
+header {
+  width: 100%;
+  height: 80px;
+  margin: 0 auto;
+  background: #ffffff;
+}
+
+header .headerWrap {
+  width: 96%;
+  max-width: 1840px;
+  min-width: 1050px;
+  margin: 0 auto;
+}
+
+header .headerWrap > h1.logo {
+  float: left;
+  margin: 25px 20px 20px 0;
+}
+
+header .headerWrap > .serchBox {
+  float: left;
+  width: 30%;
+  height: 30px;
+  border-left: solid 1px #e6e6e6;
+  margin-top: 25px;
+}
+
+header .headerWrap > .serchBox input {
+  border: none;
+  margin-top: 5px;
+  margin-left: 20px;
+  font-size: 1.4rem;
+  width: 100%;
+}
+
+header .headerWrap > .serchBox input::placeholder {
+  color: #d6d6d6;
+}
+
+header .headerWrap > .serchBox input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #d6d6d6;
+}
+
+header .headerWrap > .serchBox input::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #d6d6d6;
+}
+
+header .headerWrap > nav.gnb {
+  float: right;
+  margin: 20px 0;
+}
+
+header .headerWrap > nav.gnb > ul > li {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 30px;
+  font-size: 1.4rem;
+}
+
+header .headerWrap > nav.gnb > ul > li img {
+  vertical-align: middle;
+}
+
+header .headerWrap > nav.gnb > ul > li .profileImg {
+  margin-right: 10px;
+}
+
+header .headerWrap > nav.gnb > ul > li:last-child {
+  margin-right: 0px;
+}
+
+header .headerWrap > nav.gnb > ul > li.mobileMenu {
+  display: none;
+}
+
+/*******************************************************************
+	* 반응형 
+*******************************************************************/
+@media screen and (max-width: 1024px) {
+  header .headerWrap {
+    width: 94%;
+    max-width: 1024px;
+    min-width: 320px;
+    margin: 0 auto;
+  }
+  header .headerWrap nav.gnb ul > li {
+    display: none;
+  }
+  header .headerWrap nav.gnb ul > li.mobileMenu {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  header .headerWrap nav.gnb ul > li:last-child {
+    display: inline-block;
+  }
+}
+
+/*******************************************************************
+	* 슬라이드 페이져버튼 
+*******************************************************************/
+/* Dots */
+.slick-dots {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  width: auto;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.slick-dots li {
+  position: relative;
+  display: inline-block;
+  margin: 0 5px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.slick-dots li button {
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+  background: #ece2e3;
+  border-radius: 50%;
+  border: 0;
+  outline: none;
+}
+
+.slick-dots li.slick-active button {
+  width: 20px;
+  background: #fff;
+  border-radius: 15px;
+}
+
+.slick-dots li button:hover {
+  width: 20px;
+  background: #fff;
+  border-radius: 15px;
+}
+
+.contents {
+  width: 100%;
+  background: #fff url("../images/header_gradation.png") repeat-x;
+}
+
+.contents .mainWrap {
+  width: 1310px;
+  margin: 0 auto;
+  padding-bottom: 150px;
+}
+
+.contents .mainWrap .topBox {
+  padding: 100px 0 130px;
+}
+
+.contents .mainWrap .topBox > div {
+  float: left;
+  position: relative;
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+.contents .mainWrap .topBox > div.slideBox .imgName {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+}
+
+.contents .mainWrap .topBox > div.slideBox .imgTextBox {
+  left: 25px;
+  bottom: 25px;
+  position: absolute;
+}
+
+.contents .mainWrap .topBox > div.slideBox .imgTextBox h2 {
+  font-size: 2.8rem;
+  margin-bottom: 7px;
+}
+
+.contents .mainWrap .topBox > div.slideBox .imgTextBox h2 span {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: normal;
+}
+
+.contents .mainWrap .topBox > div.slideBox .imgTextBox h2 span img {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+.contents .mainWrap .topBox > div.slideBox .imgTextBox p {
+  width: 550px;
+}
+
+.contents .mainWrap .topBox > div.mainImgBox {
+  width: 784px;
+  margin-right: 5px;
+}
+
+.contents .mainWrap .topBox > div.mainImgBox .scoreBox {
+  position: absolute;
+  right: 25px;
+  bottom: 25px;
+}
+
+.contents .mainWrap .topBox > div.mainImgBox .scoreBox > ul > li {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.contents .mainWrap .topBox > div.mainImgBox .scoreBox > ul > li p {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.contents .mainWrap .topBox > div.mainImgBox .scoreBox > ul > li:nth-child(2) {
+  width: 1px;
+  height: 20px;
+  background: #fff;
+  margin: 0 14px;
+}
+
+.contents .mainWrap .topBox > div.mainImgBox .slick-slide {
+  position: relative;
+}
+
+.contents .mainWrap .topBox > div.commentBox {
+  width: 258px;
+  height: 237px;
+  margin-right: 5px;
+  overflow: hidden;
+  background: #f5f5f5;
+  border-radius: 15px;
+  font-size: 1.2rem;
+  color: #111;
+  padding: 25px 20px 0 20px;
+  box-sizing: border-box;
+}
+
+.contents .mainWrap .topBox > div.commentBox > p {
+  margin-bottom: 20px;
+}
+
+.contents .mainWrap .topBox > div.commentBox > ul > li {
+  margin-bottom: 10px;
+}
+
+.contents .mainWrap .topBox > div.commentBox > ul > li img {
+  vertical-align: middle;
+}
+
+.contents .mainWrap .topBox > div.commentBox > ul > li dl {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 15px;
+}
+
+.contents .mainWrap .topBox > div.commentBox .gradationBox {
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+}
+
+.contents .mainWrap .topBox > div.myCourse {
+  width: 258px;
+  height: 237px;
+  background: #f5f5f5;
+  border-radius: 15px;
+  color: #111;
+  font-size: 1.2rem;
+  line-break: 17px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.contents .mainWrap .topBox > div.myCourse img {
+  margin: 90px 0 50px;
+}
+
+.contents .mainWrap .topBox > div.newPersonComment {
+  width: 521px;
+  margin-top: 8px;
+  overflow: hidden;
+}
+
+.contents .mainWrap .topBox > div.newPersonComment .slick-slide {
+  position: relative;
+}
+
+.contents .mainWrap .topBox > div.newPersonComment .imgTextBox {
+  bottom: 80px;
+}
+
+.contents .mainWrap .topBox > div.newPersonComment .gradationBox {
+  background: url("../images/main/gra_01.png") no-repeat;
+  position: absolute;
+  padding: 10px 20px;
+  width: 100%;
+  left: 0;
+  bottom: 0px;
+  box-sizing: border-box;
+  border-radius: 15px;
+}
+
+.contents .mainWrap .topBox > div.newPersonComment .gradationBox ul > li {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.contents .mainWrap .topBox > div.newPersonComment .gradationBox ul > li.comment {
+  width: 70%;
+  margin-left: 5px;
+  margin-right: 5%;
+}
+
+.contents .mainWrap .topBox > div.newPersonComment .gradationBox ul > li:last-child {
+  text-align: center;
+}
+
+.contents .mainWrap .topBox > div.newPersonComment .gradationBox ul > li:last-child p {
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+
+.contents .mainWrap .topBox > div.newAddCourse {
+  width: 521px;
+  margin-top: 5px;
+}
+
+.contents .mainWrap .topBox > div.newAddCourse .slick-slide {
+  position: relative;
+}
+
+.contents .mainWrap .topBox > div.daily {
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.contents .mainWrap .topBox > div.daily .imgTextBox {
+  left: 25px;
+  bottom: 25px;
+  position: absolute;
+}
+
+.contents .mainWrap .topBox > div.daily .imgTextBox h2 {
+  font-size: 2.2rem;
+  line-height: 30px;
+}
+
+.contents .mainWrap .topBox > div.daily .imgTextBox h2 span {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: normal;
+}
+
+.contents .mainWrap .topBox > div.daily .imgTextBox h2 span img {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+.contents .mainWrap .topBox > div.daily.daily_01 {
+  width: 258px;
+}
+
+.contents .mainWrap .topBox > div.daily.daily_02 {
+  width: 258px;
+}
+
+.contents .mainWrap .topBox > div.daily.daily_03 {
+  width: 258px;
+}
+
+.contents .mainWrap .courseRank > h2 {
+  text-align: center;
+  font-size: 4rem;
+  line-height: 1;
+}
+
+.contents .mainWrap .courseRank > h2 span {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: normal;
+  margin: 15px 0 30px;
+}
+
+.contents .mainWrap .courseRank ul.rankChoice {
+  font-size: 1.2rem;
+  width: 300px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 35px;
+  background: #fff;
+  margin: 0 auto;
+  overflow: hidden;
+  box-shadow: 0 0 10px 0px #a7a7a7;
+}
+
+.contents .mainWrap .courseRank ul.rankChoice li {
+  width: 50%;
+  float: left;
+  text-align: center;
+  background: #f1f1f1;
+  cursor: pointer;
+}
+
+.contents .mainWrap .courseRank ul.rankChoice li.on {
+  background: #fff;
+}
+
+.contents .mainWrap .courseRank div.rankView {
+  margin-top: 20px;
+}
+
+.contents .mainWrap .courseRank div.rankView > .rankList {
+  display: inline-block;
+  width: 645px;
+}
+
+.contents .mainWrap .courseRank div.rankView > .rankList > li {
+  background: #fff;
+  border-radius: 15px;
+  position: relative;
+  margin-bottom: 15px;
+  overflow: hidden;
+  box-shadow: 1px 2px 7px 2px #ededed;
+}
+
+.contents .mainWrap .courseRank div.rankView > .rankList > li > div.rank {
+  display: inline-block;
+  vertical-align: middle;
+  width: 40px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.contents .mainWrap .courseRank div.rankView > .rankList > li > div.rankImgBox {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 20px;
+}
+
+.contents .mainWrap .courseRank div.rankView > .rankList > li > div.rankImgBox img {
+  vertical-align: top;
+}
+
+.contents .mainWrap .courseRank div.rankView > .rankList > li > dl {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.contents .mainWrap .courseRank div.rankView > .rankList > li > dl dt {
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.contents .mainWrap .courseRank div.rankView > .rankList > li > dl dd {
+  font-size: 1.2rem;
+  color: #808080;
+}
+
+.contents .mainWrap .courseRank div.rankView > .rankList > li > .rankGrade {
+  display: inline-block;
+  position: absolute;
+  top: 25px;
+  right: 20px;
+}
+
+.contents .mainWrap .courseRank div.rankView > .rankList > li > .rankGrade > div {
+  float: left;
+  padding: 0 20px;
+  border-left: solid 1px #e6e6e6;
+  height: 35px;
+  line-height: 18px;
+}
+
+.contents .mainWrap .courseRank div.rankView > .rankList > li > .rankGrade > div > ul {
+  margin-left: 10px;
+}
+
+.contents .mainWrap .courseRank div.rankView > .rankList > li > .rankGrade > div > ul > li {
+  margin-left: -10px;
+  float: left;
+}
+
+.contents .mainWrap .courseRank div.rankView > .rankList > li > .rankGrade > div.pointBox > p {
+  font-size: 2rem;
+  color: #111;
+  text-align: center;
+  font-weight: bold;
+}
+
+.contents .mainWrap .courseRank div.rankView > .rankList > li > .rankGrade > div.pointBox > span {
+  font-size: 1.2rem;
+  color: #808080;
+}
+
+.contents .mainWrap .courseRank .rankViewImg {
+  position: relative;
+  display: inline-block;
+  width: 645px;
+  margin-left: 16px;
+}
+
+.contents .mainWrap .courseRank .rankViewImg .gradationBox {
+  background: url("../images/main/gra_02.png") no-repeat;
+  position: absolute;
+  padding: 15px 25px;
+  width: 100%;
+  left: 0;
+  bottom: 0px;
+  box-sizing: border-box;
+  border-radius: 0 0 15px 15px;
+}
+
+.contents .mainWrap .courseRank .rankViewImg .gradationBox h2 {
+  font-size: 2.2rem;
+  color: #fff;
+}
+
+.contents .mainWrap .courseRank .rankViewImg .gradationBox h2 span {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: normal;
+}
+
+.contents .mainWrap .courseRank .rankViewImg .gradationBox h2 span img {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+.contents .mainWrap .courseRank .allRank {
+  display: block;
+  width: 500px;
+  height: 50px;
+  line-height: 50px;
+  margin: 30px auto 130px;
+  font-size: 1.6rem;
+  text-align: center;
+  background: #fff;
+  box-shadow: 0 0 10px 0px #a7a7a7;
+  border-radius: 25px;
+}
+
+.contents .mainWrap .restRoom {
+  width: 956px;
+  margin: 0 auto;
+}
+
+.contents .mainWrap .restRoom > div {
+  float: left;
+  font-size: 1.4rem;
+}
+
+.contents .mainWrap .restRoom > div h3, .contents .mainWrap .restRoom > div h4 {
+  font-size: 1.8rem;
+}
+
+.contents .mainWrap .restRoom > div ul > li {
+  margin-bottom: 40px;
+}
+
+.contents .mainWrap .restRoom > div ul > li > div {
+  display: inline-block;
+}
+
+.contents .mainWrap .restRoom > div ul > li > div:first-child {
+  width: 75%;
+  margin-right: 6%;
+}
+
+.contents .mainWrap .restRoom > div ul > li > div.newReamimgBox {
+  width: 120px;
+  height: 120px;
+  background: #cccccc;
+}
+
+.contents .mainWrap .restRoom > div ul > li p {
+  font-size: 1.4rem;
+  color: #808080;
+  margin: 10px 0;
+}
+
+.contents .mainWrap .restRoom > div ul > li span {
+  font-size: 1.3rem;
+  color: #808080;
+  display: block;
+}
+
+.contents .mainWrap .restRoom > div ul > li span.name {
+  color: #111;
+}
+
+.contents .mainWrap .restRoom > div.newRead {
+  width: 660px;
+  margin-right: 50px;
+}
+
+.contents .mainWrap .restRoom > div.newRead > hr {
+  background: url("../images/main/newReadLine.png") no-repeat;
+  width: 100%;
+  height: 1px;
+  border: none;
+  margin: 15px 0;
+}
+
+.contents .mainWrap .restRoom > div.popularRead {
+  width: 246px;
+}
+
+.contents .mainWrap .restRoom > div.popularRead > hr {
+  background: url("../images/main/popularReadLine.png") no-repeat;
+  width: 100%;
+  height: 1px;
+  border: none;
+  margin: 15px 0;
+}
+/*# sourceMappingURL=main.css.map */

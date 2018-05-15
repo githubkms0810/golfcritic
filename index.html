@@ -5,8 +5,399 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="http://cdn.webix.com/edge/webix.css" type="text/css">
+    <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
+    <!-- 헤더 -->
+    <header>
+        <div class="headerWrap clearfix">
+            <h1 class="logo"><img src="./images/logo.png" alt="로고"></h1>
+            <div class="serchBox"><input type="text" placeholder="찾고 싶은 골프장을 입력해보세요!"></div>
+            <nav class="gnb">
+                <ul>
+                    <li><a href="#">나라별 코스</a></li>
+                    <li><a href="#">최근 평가된 코스</a></li>
+                    <li><a href="#">코스 순위</a></li>
+                    <li><a href="#">랜덤 코스</a></li>
+                    <li><a href="#">그늘집</a></li>
+                    <li class="mobileMenu"><a href="#"><img src="./images/mobile/mobile_icon.png" alt=""></a></li>
+                    <li><a href="#"><img class="profileImg" src="images/profile.png" alt="프로필사진"><img src="images/profile_arrow.png" alt=""></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 메인컨텐츠 -->
+    <section class="contents">
+        <div class="mainWrap">
+            <!-- 탑 이미지  -->
+            <div class="topBox clearfix">
+                <!-- 가장큰 이미지 슬라이드 -->
+                <div class="slideBox mainImgBox">
+                    <div>
+                        <span class="imgName">금주의 코스</span>
+                        <div class="imgTextBox">
+                            <h2>나리타 G.C <span><img src="./images/main/marker.png" alt="">일본 > 시즈오카</span></h2>
+                            <p>골퍼라면 누구라도 한 번쯤은 꿈꿔 볼만한 프리미엄 구릉 코스. 월드 탑 1000 코스에도 선정되는 등, 말이 필요없는 하이 퀄리티의 골프장으로서 축복받은 지리적 조건을 바탕으로 완만한 구릉 지대가 가능한 자연과 조화롭게, 그것도 각 홀의 특징을 살려 설계되어...</p>
+                        </div>
+                        <div class="scoreBox">
+                            <ul>
+                                <li>
+                                    <p>87</p>
+                                    패널 평점
+                                </li>
+                                <li></li>
+                                <li>
+                                    <p>9.5</p>
+                                    일반 평점
+                                </li>
+                            </ul>
+                        </div>
+                        <img src="./images/main/main_slider_01.png" alt="">
+                    </div>
+                    <div><img src="./images/main/main_slider_01.png" alt=""></div>
+                    <div><img src="./images/main/main_slider_01.png" alt=""></div>
+                </div>
+                <!-- 댓글박스 -->
+                <div class="commentBox">
+                    <p>최근 활동 내역</p>
+                    <ul>
+                        <li>
+                            <img src="./images/main/commentImg.png" alt="">
+                            <dl>
+                                <dd><strong>Lizel</strong>님이 평가를 남겼습니다!</dd>
+                                <dd>니죠 C.C.</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <img src="./images/main/commentImg.png" alt="">
+                            <dl>
+                                <dd><strong>Lizel</strong>님이 평가를 남겼습니다!</dd>
+                                <dd>니죠 C.C.</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <img src="./images/main/commentImg.png" alt="">
+                            <dl>
+                                <dd><strong>Lizel</strong>님이 평가를 남겼습니다!</dd>
+                                <dd>니죠 C.C.</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <img src="./images/main/commentImg.png" alt="">
+                            <dl>
+                                <dd><strong>Lizel</strong>님이 평가를 남겼습니다!</dd>
+                                <dd>니죠 C.C.</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <img src="./images/main/commentImg.png" alt="">
+                            <dl>
+                                <dd><strong>Lizel</strong>님이 평가를 남겼습니다!</dd>
+                                <dd>니죠 C.C.</dd>
+                            </dl>
+                        </li>
+                    </ul>
+                    <div class="gradationBox">
+                        <img src="./images/main/gra.png" alt="">
+                    </div>   
+                </div>
+                <!-- 맞춤코스 -->
+                <div class="myCourse">
+                    <img src="./images/main/plus.png" alt="">
+                    <p>다녀온 골프장 평가를 남기면<br/>나만의 맞춤 코스를 받아볼 수 있어요!</p>
+                </div>
     
+                <!-- 최근패널평가 -->
+                <div class="slideBox newPersonComment">
+                    <div>
+                        <span class="imgName">최근 패널 평가</span>
+                        <div class="imgTextBox">
+                            <h2>나리타 G.C <span><img src="./images/main/marker.png" alt="">일본 > 시즈오카</span></h2>
+                        </div>
+                        <img src="./images/main/newPerson_slide_01.png" alt="">
+                        <div class="gradationBox">
+                            <ul>
+                                <li><img src="images/main/profile_img_01.png" alt=""></li>
+                                <li class="comment">나가사키 파크 C.C.은 잭 니클라우스가 여태 노력을 기울여온 모든 것의 합판이다 - lgal 패널</li>
+                                <li><p>87</p>패널평점</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div><img src="./images/main/newPerson_slide_01.png" alt=""></div>
+                    <div><img src="./images/main/newPerson_slide_01.png" alt=""></div>
+                </div>
+    
+                <!-- 최근추가된코스 -->
+                <div class="slideBox newAddCourse">
+                    <div>
+                        <span class="imgName">최근 패널 평가</span>
+                        <div class="imgTextBox">
+                            <h2>사디야트 쥬리기 G.C.<span><img src="./images/main/marker.png" alt="">두바이 > 시즈오</span></h2>
+                        </div>
+                        <img src="./images/main/newAddCourse_slide_01.png" alt="">
+                    </div>
+                    <div><img src="./images/main/newAddCourse_slide_01.png" alt=""></div>
+                    <div><img src="./images/main/newAddCourse_slide_01.png" alt=""></div>
+                </div>
+    
+                <!-- 오늘의테마  -->
+                <div class="daily daily_01">
+                    <div>
+                        <div class="imgTextBox">
+                            <h2>무더위 여름 특집<span><img src="./images/main/calendar.png" alt="">오늘의 테마</span></h2>
+                        </div>
+                    </div>
+                    <img src="./images/main/daily_img_01.png" alt="">
+                </div>
+                <div class="daily daily_02">
+                    <div>
+                        <div class="imgTextBox">
+                            <h2>골프 다이제스트 2017<br/>TOP 100<span><img src="./images/main/calendar.png" alt="">오늘의 테마</span></h2>
+                        </div>
+                    </div>
+                    <img src="./images/main/daily_img_02.png" alt="">
+                </div>
+                <div class="daily daily_03">
+                    <div>
+                        <div class="imgTextBox">
+                            <h2>챔피언 코스 특집<span><img src="./images/main/calendar.png" alt="">오늘의 테마</span></h2>
+                        </div>
+                    </div>
+                    <img src="./images/main/daily_img_03.png" alt="">
+                </div>
+            </div>
+
+            <!-- 코스랭크 -->
+            <div class="courseRank">
+                <h2>
+                    <img src="./images/main/courseRank.png" alt=""><br/>코스순위<span>나라별보기</span>
+                </h2>
+                <ul class="rankChoice clearfix">
+                    <li class="on">패널순위</li>
+                    <li>일반순위</li>
+                </ul>
+
+                <div class="rankView">
+                    <ul class="rankList">
+                        <li>
+                            <div class="rank"><img src="./images/main/rank_01.png" alt="1등"></div>
+                            <div class="rankImgBox"><img src="images/list/list_img_01.png" alt=""></div>
+                            <dl>
+                                <dt>나리타 G.C.</dt>
+                                <dd>일본 > 시즈오카</dd>
+                            </dl>
+                            <div class="rankGrade clearfix">
+                                <div>
+                                    <ul class="clearfix">
+                                        <li><img src="images/list/list_member_01.png" alt=""></li>
+                                        <li><img src="images/list/list_member_01.png" alt=""></li>
+                                        <li><img src="images/list/list_member_03.png" alt=""></li>
+                                        <li><img src="images/list/list_member_03.png" alt=""></li>
+                                    </ul>
+                                </div>
+                                <div class="pointBox">
+                                    <p>98</p>
+                                    <span>패널 평점</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="rank"><img src="./images/main/rank_02.png" alt="1등"></div>
+                            <div class="rankImgBox"><img src="images/list/list_img_01.png" alt=""></div>
+                            <dl>
+                                <dt>나리타 G.C.</dt>
+                                <dd>일본 > 시즈오카</dd>
+                            </dl>
+                            <div class="rankGrade clearfix">
+                                <div>
+                                    <ul class="clearfix">
+                                        <li><img src="images/list/list_member_01.png" alt=""></li>
+                                        <li><img src="images/list/list_member_01.png" alt=""></li>
+                                        <li><img src="images/list/list_member_03.png" alt=""></li>
+                                        <li><img src="images/list/list_member_03.png" alt=""></li>
+                                    </ul>
+                                </div>
+                                <div class="pointBox">
+                                    <p>98</p>
+                                    <span>패널 평점</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="rank"><img src="./images/main/rank_03.png" alt="1등"></div>
+                            <div class="rankImgBox"><img src="images/list/list_img_01.png" alt=""></div>
+                            <dl>
+                                <dt>나리타 G.C.</dt>
+                                <dd>일본 > 시즈오카</dd>
+                            </dl>
+                            <div class="rankGrade clearfix">
+                                <div>
+                                    <ul class="clearfix">
+                                        <li><img src="images/list/list_member_01.png" alt=""></li>
+                                        <li><img src="images/list/list_member_01.png" alt=""></li>
+                                        <li><img src="images/list/list_member_03.png" alt=""></li>
+                                        <li><img src="images/list/list_member_03.png" alt=""></li>
+                                    </ul>
+                                </div>
+                                <div class="pointBox">
+                                    <p>98</p>
+                                    <span>패널 평점</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="rank">4</div>
+                            <div class="rankImgBox"><img src="images/list/list_img_01.png" alt=""></div>
+                            <dl>
+                                <dt>나리타 G.C.</dt>
+                                <dd>일본 > 시즈오카</dd>
+                            </dl>
+                            <div class="rankGrade clearfix">
+                                <div>
+                                    <ul class="clearfix">
+                                        <li><img src="images/list/list_member_01.png" alt=""></li>
+                                        <li><img src="images/list/list_member_01.png" alt=""></li>
+                                        <li><img src="images/list/list_member_03.png" alt=""></li>
+                                        <li><img src="images/list/list_member_03.png" alt=""></li>
+                                    </ul>
+                                </div>
+                                <div class="pointBox">
+                                    <p>98</p>
+                                    <span>패널 평점</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="rank">5</div>
+                            <div class="rankImgBox"><img src="images/list/list_img_01.png" alt=""></div>
+                            <dl>
+                                <dt>나리타 G.C.</dt>
+                                <dd>일본 > 시즈오카</dd>
+                            </dl>
+                            <div class="rankGrade clearfix">
+                                <div>
+                                    <ul class="clearfix">
+                                        <li><img src="images/list/list_member_01.png" alt=""></li>
+                                        <li><img src="images/list/list_member_01.png" alt=""></li>
+                                        <li><img src="images/list/list_member_03.png" alt=""></li>
+                                        <li><img src="images/list/list_member_03.png" alt=""></li>
+                                    </ul>
+                                </div>
+                                <div class="pointBox">
+                                    <p>98</p>
+                                    <span>패널 평점</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="rankViewImg">
+                        <div class="gradationBox">
+                            <h2>나리타 G.C <span><img src="./images/main/marker.png" alt="">일본 > 시즈오카</span></h2>
+                        </div>
+                        <img src="./images/main/rankView_img_01.png" alt="">
+                    </div>
+
+                    <a href="#" class="allRank">전체 코스 순위 확인하기</a>
+                </div>
+            </div>
+
+            <!-- 그늘집 -->
+            <div class="restRoom clearfix">
+                <div class="newRead">
+                    <h3>최근 읽을 거리</h3>
+                    <hr>
+                    <ul>
+                        <li>
+                            <div>
+                                <h4>아름답고 일월과 그들의 풍부하게 말이다</h4>
+                                <p>천자만홍이 장식하는 청춘의 위하여 이것이야말로 같은 끓는다. 위하여 오아이스도 그들에게 말이다. 없으면 듣기만 청춘을 아름다우냐? 있으며, 목숨을 인도하겠...</p>
+                                <span class="name">홍길동</span>
+                                <span class="date">2018년 4월 19일 오전 11시 25분</span>
+                            </div>
+                            <div class="newReamimgBox"></div>
+                        </li>
+                        <li>
+                            <div>
+                                <h4>아름답고 일월과 그들의 풍부하게 말이다</h4>
+                                <p>천자만홍이 장식하는 청춘의 위하여 이것이야말로 같은 끓는다. 위하여 오아이스도 그들에게 말이다. 없으면 듣기만 청춘을 아름다우냐? 있으며, 목숨을 인도하겠...</p>
+                                <span class="name">홍길동</span>
+                                <span class="date">2018년 4월 19일 오전 11시 25분</span>
+                            </div>
+                            <div class="newReamimgBox"></div>
+                        </li>
+                        <li>
+                            <div>
+                                <h4>아름답고 일월과 그들의 풍부하게 말이다</h4>
+                                <p>천자만홍이 장식하는 청춘의 위하여 이것이야말로 같은 끓는다. 위하여 오아이스도 그들에게 말이다. 없으면 듣기만 청춘을 아름다우냐? 있으며, 목숨을 인도하겠...</p>
+                                <span class="name">홍길동</span>
+                                <span class="date">2018년 4월 19일 오전 11시 25분</span>
+                            </div>
+                            <div class="newReamimgBox"></div>
+                        </li>
+                        <li>
+                            <div>
+                                <h4>아름답고 일월과 그들의 풍부하게 말이다</h4>
+                                <p>천자만홍이 장식하는 청춘의 위하여 이것이야말로 같은 끓는다. 위하여 오아이스도 그들에게 말이다. 없으면 듣기만 청춘을 아름다우냐? 있으며, 목숨을 인도하겠...</p>
+                                <span class="name">홍길동</span>
+                                <span class="date">2018년 4월 19일 오전 11시 25분</span>
+                            </div>
+                            <div class="newReamimgBox"></div>
+                        </li>
+                        <li>
+                            <div>
+                                <h4>아름답고 일월과 그들의 풍부하게 말이다</h4>
+                                <p>천자만홍이 장식하는 청춘의 위하여 이것이야말로 같은 끓는다. 위하여 오아이스도 그들에게 말이다. 없으면 듣기만 청춘을 아름다우냐? 있으며, 목숨을 인도하겠...</p>
+                                <span class="name">홍길동</span>
+                                <span class="date">2018년 4월 19일 오전 11시 25분</span>
+                            </div>
+                            <div class="newReamimgBox"></div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="popularRead">
+                    <h3>인기있는 읽을 거리</h3>
+                    <hr>
+                    <ul>
+                        <li>
+                            <h4>아름답고 일월과 그들의 풍부하게 과 그들의 풍부하게 말이다</h4>
+                            <span class="name">홍길동</span>
+                            <span class="date">2018년 4월 19일 오전 11시 25분</span>
+                        </li>
+                        <li>
+                            <h4>아름답고 일월과 그들의 풍부하게 과 그들의 풍부하게 말이다</h4>
+                            <span class="name">홍길동</span>
+                            <span class="date">2018년 4월 19일 오전 11시 25분</span>
+                        </li>
+                        <li>
+                            <h4>아름답고 일월과 그들의 풍부하게 과 그들의 풍부하게 말이다</h4>
+                            <span class="name">홍길동</span>
+                            <span class="date">2018년 4월 19일 오전 11시 25분</span>
+                        </li>
+                        <li>
+                            <h4>아름답고 일월과 그들의 풍부하게 과 그들의 풍부하게 말이다</h4>
+                            <span class="name">홍길동</span>
+                            <span class="date">2018년 4월 19일 오전 11시 25분</span>
+                        </li>
+                        <li>
+                            <h4>아름답고 일월과 그들의 풍부하게 과 그들의 풍부하게 말이다</h4>
+                            <span class="name">홍길동</span>
+                            <span class="date">2018년 4월 19일 오전 11시 25분</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>    
+        </div>
+    </section>
+
+
+    <!-- 스크립트 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>

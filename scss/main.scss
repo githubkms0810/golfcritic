@@ -1,0 +1,355 @@
+@charset "utf-8";
+@import "reset.scss";
+@import "common.scss";
+
+.contents {
+    width:100%;
+    background: #fff url('../images/header_gradation.png') repeat-x ;
+    .mainWrap {
+        width:1310px;
+        margin:0 auto;
+        padding-bottom:150px;
+        .topBox{
+            padding: 100px 0 130px;
+            > div {
+                float:left;
+                position:relative;
+                color:#fff;
+                font-size:1.4rem;
+    
+                &.slideBox{
+                    .imgName { 
+                        position:absolute;
+                        top:25px; left:25px;
+                    }
+                    .imgTextBox {
+                        left:25px; bottom:25px;
+                        position: absolute;
+                        h2 {
+                            font-size:2.8rem;
+                            margin-bottom:7px;
+                            span {
+                                display:block;
+                                font-size:1.4rem;
+                                font-weight: normal;
+                                img { display:inline-block; vertical-align: middle; margin-right:6px;}
+                            }
+                        }
+                        p { width:550px;}
+                    }
+                }
+                // 가장큰슬라이더
+                &.mainImgBox {
+                    width:784px;
+                    margin-right:5px;
+                    .scoreBox {
+                        position: absolute;
+                        right:25px; bottom:25px;
+                        > ul {
+                            > li {
+                                display: inline-block;
+                                vertical-align: middle;
+                                text-align:center;
+                                font-size:1.2rem;
+                                p{
+                                    font-size:4rem;
+                                    font-weight: bold;
+                                }
+                                &:nth-child(2){
+                                    width:1px; height:20px;
+                                    background:#fff;
+                                    margin:0 14px;
+                                }
+                            }
+                        }
+                    }
+                    .slick-slide { position: relative;}
+                }
+    
+                // 최근활동내역
+                &.commentBox {
+                    width:258px; height:237px;
+                    margin-right:5px;
+                    overflow: hidden;
+                    background:#f5f5f5;
+                    border-radius: 15px;
+                    font-size:1.2rem; color:#111;
+                    padding:25px 20px 0 20px;
+                    box-sizing: border-box;
+                    > p {
+                        margin-bottom:20px;
+                    }
+                    > ul {
+                        > li {
+                            margin-bottom:10px;
+                            img { vertical-align: middle;}
+                            dl { 
+                                display:inline-block; vertical-align: middle;
+                                margin-left:15px;
+                            }
+                        }
+                    }
+                    .gradationBox {
+                        position:absolute;
+                        bottom:-3px; left:0;
+                    }
+                }
+                &.myCourse{
+                    width:258px; height:237px;
+                    background:#f5f5f5;
+                    border-radius: 15px;
+                    color:#111;
+                    font-size:1.2rem;
+                    line-break: 17px;
+                    text-align:center;
+                    cursor: pointer;
+                    img { margin:90px 0 50px;}
+                }
+                &.newPersonComment{
+                    width:521px;
+                    margin-top:8px;
+                    overflow: hidden;
+                    .slick-slide { position: relative;}
+                    .imgTextBox { bottom:80px;}
+                    .gradationBox {
+                        background: url('../images/main/gra_01.png') no-repeat;
+                        position: absolute;
+                        padding:10px 20px;
+                        width:100%;
+                        left:0; bottom:0px;
+                        box-sizing: border-box;
+                        border-radius: 15px;
+                        ul > li {
+                            display:inline-block;
+                            vertical-align: middle;
+                            &.comment { width:70%; margin-left:5px; margin-right:5%;}
+                            &:last-child { 
+                                text-align: center;
+                                p { font-size:2.4rem; font-weight: bold;}
+                            }
+                        }
+                    }
+                }
+                &.newAddCourse{
+                    width:521px;
+                    margin-top:5px;
+                    .slick-slide { position: relative;}
+                }
+                &.daily {
+                    margin-top:5px;
+                    margin-left:5px;
+                    .imgTextBox {
+                        left:25px; bottom:25px;
+                        position: absolute;
+                        h2 {
+                            font-size:2.2rem;
+                            line-height: 30px;
+                            span {
+                                display:block;
+                                font-size:1.4rem;
+                                font-weight: normal;
+                                img { display:inline-block; vertical-align: middle; margin-right:6px;}
+                            }
+                        }
+                    }
+                    &.daily_01{
+                        width:258px;
+                    }
+                    &.daily_02{
+                        width:258px;
+                    }
+                    &.daily_03{
+                        width:258px;
+                    }
+                }
+            }
+        }
+
+        //코스랭크
+        .courseRank{
+            >h2 { 
+                text-align:center;
+                font-size:4rem;
+                line-height: 1;
+                span{
+                    display:block;
+                    font-size:1.6rem;
+                    font-weight: normal;
+                    margin:15px 0 30px;
+                }
+            }
+            ul.rankChoice {
+                font-size:1.2rem;
+                width:300px; height:30px; line-height:30px;
+                border-radius: 35px;
+                background:#fff;
+                margin:0 auto;
+                overflow: hidden;
+                box-shadow: 0 0 10px 0px #a7a7a7;
+                li {
+                    width:50%;
+                    float:left;
+                    text-align: center;
+                    background:#f1f1f1;
+                    cursor: pointer;
+                    &.on {
+                        background:#fff;
+                    }
+                }
+            }
+
+
+            div.rankView{
+                margin-top:20px;
+                > .rankList{
+                    display:inline-block;
+                    width:645px;
+                    > li {
+                        background:#fff;
+                        border-radius: 15px;
+                        position: relative;
+                        margin-bottom:15px;
+                        overflow: hidden;
+                        box-shadow: 1px 2px 7px 2px #ededed;
+                        > div.rank { 
+                            display:inline-block;vertical-align: middle;
+                            width:40px; text-align:center;
+                            font-size:1.2rem;
+                            font-weight: bold;
+                        }
+                        > div.rankImgBox {
+                            display:inline-block;
+                            vertical-align: middle;
+                            margin-right:20px;
+                            img { vertical-align: top;}
+                        }
+                        > dl {
+                            display:inline-block;
+                            vertical-align: middle;
+                            dt {
+                                font-weight: bold;
+                                font-size:1.4rem;
+                            }
+                            dd { 
+                                font-size:1.2rem;
+                                color:#808080;
+                            }
+                        }
+                        > .rankGrade {
+                            display:inline-block;
+                            position: absolute;
+                            top:25px; right:20px;
+                            > div {
+                                float:left;
+                                padding:0 20px;
+                                border-left:solid 1px #e6e6e6;
+                                height: 35px; line-height: 18px;
+                                > ul {
+                                    margin-left:10px;
+                                    > li {
+                                        margin-left:-10px;
+                                        float: left;
+                                    }
+                                }
+                                &.pointBox {
+                                    > p { font-size:2rem; color:#111; text-align: center; font-weight: bold;}
+                                    > span { font-size:1.2rem; color:#808080;}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .rankViewImg {
+                position:relative;
+                display:inline-block;
+                width:645px; margin-left:16px;
+                .gradationBox {
+                    background: url('../images/main/gra_02.png') no-repeat;
+                    position: absolute;
+                    padding:15px 25px;
+                    width:100%;
+                    left:0; bottom:0px;
+                    box-sizing: border-box;
+                    border-radius: 0 0 15px 15px;
+                    h2 {
+                        font-size:2.2rem;
+                        color:#fff;
+                        span {
+                            display:block;
+                            font-size:1.4rem;
+                            font-weight: normal;
+                            img { display:inline-block; vertical-align: middle; margin-right:6px;}
+                        }
+                    }
+                }
+            }
+
+            .allRank {
+                display:block;
+                width:500px; height:50px;
+                line-height: 50px;
+                margin:30px auto 130px;
+                font-size:1.6rem; text-align:center;
+                background: #fff;
+                box-shadow: 0 0 10px 0px #a7a7a7;
+                border-radius: 25px;
+            }
+           
+        }
+
+
+        // 그늘집
+        .restRoom{
+            width:956px; 
+            margin:0 auto;
+            > div {
+                float:left;
+                font-size:1.4rem;
+                h3,h4 { font-size:1.8rem;}
+                ul > li {
+                    margin-bottom:40px;
+                    > div { 
+                        display:inline-block;
+                        &:first-child { 
+                            width: 75%;
+                            margin-right: 6%;
+                        }
+                        &.newReamimgBox { 
+                            width:120px; height:120px;
+                            background: #cccccc;
+                        }
+                    } 
+                    p { font-size:1.4rem; color:#808080;margin:10px 0;}
+                    span { 
+                        font-size:1.3rem; color:#808080;
+                        display:block;
+                        &.name { color:#111;}
+                    }
+                }
+                &.newRead {
+                    width:660px;
+                    margin-right:50px;
+                    > hr {
+                        background:url('../images/main/newReadLine.png') no-repeat;
+                        width:100%;
+                        height:1px;
+                        border:none;
+                        margin:15px 0;
+                    }
+                }
+                &.popularRead{
+                    width:246px;
+                    > hr {
+                        background:url('../images/main/popularReadLine.png') no-repeat;
+                        width:100%;
+                        height:1px;
+                        border:none;
+                        margin:15px 0;
+                    }
+                }
+            }
+        }
+    }
+}
