@@ -111,6 +111,7 @@ caption {
 header {
   width: 100%;
   height: 80px;
+  min-width: 1150px;
   margin: 0 auto;
   background: #ffffff;
 }
@@ -133,6 +134,7 @@ header .headerWrap > .serchBox {
   height: 30px;
   border-left: solid 1px #e6e6e6;
   margin-top: 25px;
+  position: relative;
 }
 
 header .headerWrap > .serchBox input {
@@ -158,6 +160,67 @@ header .headerWrap > .serchBox input::-ms-input-placeholder {
   color: #d6d6d6;
 }
 
+header .headerWrap > .serchBox .realSearch {
+  background: #fff;
+  border-radius: 30px;
+  width: 600px;
+  height: 300px;
+  overflow: hidden;
+  position: absolute;
+  top: 70px;
+  z-index: 9;
+  display: none;
+}
+
+header .headerWrap > .serchBox .realSearch > p {
+  font-size: 1.2rem;
+  color: #737f86;
+  border-bottom: solid 1px #dce3e4;
+  padding: 10px 20px;
+}
+
+header .headerWrap > .serchBox .realSearch > p span {
+  color: #b9c3c5;
+}
+
+header .headerWrap > .serchBox .realSearch > ul {
+  width: 90%;
+  margin: 0 auto;
+}
+
+header .headerWrap > .serchBox .realSearch > ul > li {
+  border-bottom: solid 1px #dce3e4;
+  padding: 15px 0;
+}
+
+header .headerWrap > .serchBox .realSearch > ul > li div {
+  width: 50px;
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: top;
+}
+
+header .headerWrap > .serchBox .realSearch > ul > li dl {
+  width: 470px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+header .headerWrap > .serchBox .realSearch > ul > li dl dt {
+  font-size: 1.5rem;
+}
+
+header .headerWrap > .serchBox .realSearch > ul > li dl dt span {
+  display: inline-block;
+  vertical-align: middle;
+  color: #808080;
+}
+
+header .headerWrap > .serchBox .realSearch > ul > li dl dd {
+  color: #849096;
+  font-size: 1.3rem;
+}
+
 header .headerWrap > nav.gnb {
   float: right;
   margin: 20px 0;
@@ -180,6 +243,7 @@ header .headerWrap > nav.gnb > ul > li .profileImg {
 
 header .headerWrap > nav.gnb > ul > li:last-child {
   margin-right: 0px;
+  position: relative;
 }
 
 header .headerWrap > nav.gnb > ul > li:last-child span {
@@ -193,6 +257,33 @@ header .headerWrap > nav.gnb > ul > li:last-child span .profileDot {
   bottom: 0;
 }
 
+header .headerWrap > nav.gnb > ul > li:last-child .dropMenu {
+  background: #fff;
+  padding: 10px;
+  border-radius: 15px;
+  position: absolute;
+  width: 100px;
+  top: 120%;
+  right: -15px;
+  box-shadow: 0 -2px 6px 0px #ddd;
+  display: none;
+}
+
+header .headerWrap > nav.gnb > ul > li:last-child .dropMenu img {
+  position: absolute;
+  top: -8px;
+  right: 15px;
+}
+
+header .headerWrap > nav.gnb > ul > li:last-child .dropMenu > ul > li {
+  padding: 5px 0;
+  text-align: center;
+}
+
+header .headerWrap > nav.gnb > ul > li:last-child .dropMenu > ul.dropsubMenu {
+  border-top: solid 1px #e1e1e1;
+}
+
 header .headerWrap > nav.gnb > ul > li.mobileMenu {
   display: none;
 }
@@ -201,6 +292,9 @@ header .headerWrap > nav.gnb > ul > li.mobileMenu {
 	* 반응형 
 *******************************************************************/
 @media screen and (max-width: 1024px) {
+  header {
+    min-width: auto;
+  }
   header .headerWrap {
     width: 94%;
     max-width: 1024px;
@@ -265,6 +359,89 @@ header .headerWrap > nav.gnb > ul > li.mobileMenu {
   width: 20px;
   background: #fff;
   border-radius: 15px;
+}
+
+/* text-based popup styling */
+.white-popup {
+  position: relative;
+  background: #FFF;
+  padding: 25px;
+  width: auto;
+  max-width: 920px;
+  margin: 0 auto;
+  border-radius: 15px;
+  top: 30px;
+}
+
+.white-popup > h2 {
+  text-align: center;
+  font-size: 2.4rem;
+  padding-top: 20px;
+}
+
+.white-popup > p {
+  text-align: center;
+  font-size: 1.4rem;
+  color: #808080;
+  margin-bottom: 30px;
+}
+
+.white-popup > ul {
+  width: 720px;
+  margin: 0 auto;
+}
+
+.white-popup > ul > li {
+  float: left;
+  width: 350px;
+  margin: 3px 5px;
+  position: relative;
+}
+
+.white-popup > ul > li > div {
+  position: absolute;
+  color: #fff;
+  font-size: 1.4rem;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  margin-top: -25px;
+  margin-left: -25px;
+}
+
+.mfp-zoom-in {
+  /* start state */
+  /* animate in */
+  /* animate out */
+}
+
+.mfp-zoom-in .mfp-with-anim {
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  transform: scale(0.8);
+}
+
+.mfp-zoom-in.mfp-bg {
+  opacity: 0;
+  transition: all 0.3s ease-out;
+}
+
+.mfp-zoom-in.mfp-ready .mfp-with-anim {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.mfp-zoom-in.mfp-ready.mfp-bg {
+  opacity: 0.8;
+}
+
+.mfp-zoom-in.mfp-removing .mfp-with-anim {
+  transform: scale(0.8);
+  opacity: 0;
+}
+
+.mfp-zoom-in.mfp-removing.mfp-bg {
+  opacity: 0;
 }
 
 html {

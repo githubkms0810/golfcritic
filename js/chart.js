@@ -1,5 +1,5 @@
 var myConfig = {
-    "backgroundColor": '#fff',
+    "backgroundColor": '',
     "type": "radar",
     "plot": {
       "aspect": "area",
@@ -21,8 +21,7 @@ var myConfig = {
       }
     },
     "scale-k": {
-      "values": "0:330:30",
-      "format": "%v°",
+      "labels": ["가성비", "시설 설비", "식사", "전략성", "페어웨이 넓이", "그린의 난이도" , "전장의<br/>길이", "코스"],
       "aspect": "circle", //To set the chart shape to circular.
       "guide": {
         "line-style": "solid",
@@ -35,7 +34,7 @@ var myConfig = {
       },
     },
     "series": [{
-      "values": [59, 30, 65, 34, 40, 33, 31, 90, 81, 70, 100, 28],
+      "values": [59, 30, 65, 34, 40, 33, 31, 90],
       "background-color": "#00BAF2",
       "line-color": "#00BAF2"
     }]

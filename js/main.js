@@ -25,5 +25,5 @@ $(document).ready(function(){
         autoplay: true,
         autoplaySpeed : 6000
     });
-    console.log("A")
+
 })

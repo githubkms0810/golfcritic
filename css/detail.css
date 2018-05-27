@@ -111,6 +111,7 @@ caption {
 header {
   width: 100%;
   height: 80px;
+  min-width: 1150px;
   margin: 0 auto;
   background: #ffffff;
 }
@@ -133,6 +134,7 @@ header .headerWrap > .serchBox {
   height: 30px;
   border-left: solid 1px #e6e6e6;
   margin-top: 25px;
+  position: relative;
 }
 
 header .headerWrap > .serchBox input {
@@ -158,6 +160,67 @@ header .headerWrap > .serchBox input::-ms-input-placeholder {
   color: #d6d6d6;
 }
 
+header .headerWrap > .serchBox .realSearch {
+  background: #fff;
+  border-radius: 30px;
+  width: 600px;
+  height: 300px;
+  overflow: hidden;
+  position: absolute;
+  top: 70px;
+  z-index: 9;
+  display: none;
+}
+
+header .headerWrap > .serchBox .realSearch > p {
+  font-size: 1.2rem;
+  color: #737f86;
+  border-bottom: solid 1px #dce3e4;
+  padding: 10px 20px;
+}
+
+header .headerWrap > .serchBox .realSearch > p span {
+  color: #b9c3c5;
+}
+
+header .headerWrap > .serchBox .realSearch > ul {
+  width: 90%;
+  margin: 0 auto;
+}
+
+header .headerWrap > .serchBox .realSearch > ul > li {
+  border-bottom: solid 1px #dce3e4;
+  padding: 15px 0;
+}
+
+header .headerWrap > .serchBox .realSearch > ul > li div {
+  width: 50px;
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: top;
+}
+
+header .headerWrap > .serchBox .realSearch > ul > li dl {
+  width: 470px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+header .headerWrap > .serchBox .realSearch > ul > li dl dt {
+  font-size: 1.5rem;
+}
+
+header .headerWrap > .serchBox .realSearch > ul > li dl dt span {
+  display: inline-block;
+  vertical-align: middle;
+  color: #808080;
+}
+
+header .headerWrap > .serchBox .realSearch > ul > li dl dd {
+  color: #849096;
+  font-size: 1.3rem;
+}
+
 header .headerWrap > nav.gnb {
   float: right;
   margin: 20px 0;
@@ -180,6 +243,7 @@ header .headerWrap > nav.gnb > ul > li .profileImg {
 
 header .headerWrap > nav.gnb > ul > li:last-child {
   margin-right: 0px;
+  position: relative;
 }
 
 header .headerWrap > nav.gnb > ul > li:last-child span {
@@ -193,6 +257,33 @@ header .headerWrap > nav.gnb > ul > li:last-child span .profileDot {
   bottom: 0;
 }
 
+header .headerWrap > nav.gnb > ul > li:last-child .dropMenu {
+  background: #fff;
+  padding: 10px;
+  border-radius: 15px;
+  position: absolute;
+  width: 100px;
+  top: 120%;
+  right: -15px;
+  box-shadow: 0 -2px 6px 0px #ddd;
+  display: none;
+}
+
+header .headerWrap > nav.gnb > ul > li:last-child .dropMenu img {
+  position: absolute;
+  top: -8px;
+  right: 15px;
+}
+
+header .headerWrap > nav.gnb > ul > li:last-child .dropMenu > ul > li {
+  padding: 5px 0;
+  text-align: center;
+}
+
+header .headerWrap > nav.gnb > ul > li:last-child .dropMenu > ul.dropsubMenu {
+  border-top: solid 1px #e1e1e1;
+}
+
 header .headerWrap > nav.gnb > ul > li.mobileMenu {
   display: none;
 }
@@ -201,6 +292,9 @@ header .headerWrap > nav.gnb > ul > li.mobileMenu {
 	* 반응형 
 *******************************************************************/
 @media screen and (max-width: 1024px) {
+  header {
+    min-width: auto;
+  }
   header .headerWrap {
     width: 94%;
     max-width: 1024px;
@@ -267,11 +361,95 @@ header .headerWrap > nav.gnb > ul > li.mobileMenu {
   border-radius: 15px;
 }
 
+/* text-based popup styling */
+.white-popup {
+  position: relative;
+  background: #FFF;
+  padding: 25px;
+  width: auto;
+  max-width: 920px;
+  margin: 0 auto;
+  border-radius: 15px;
+  top: 30px;
+}
+
+.white-popup > h2 {
+  text-align: center;
+  font-size: 2.4rem;
+  padding-top: 20px;
+}
+
+.white-popup > p {
+  text-align: center;
+  font-size: 1.4rem;
+  color: #808080;
+  margin-bottom: 30px;
+}
+
+.white-popup > ul {
+  width: 720px;
+  margin: 0 auto;
+}
+
+.white-popup > ul > li {
+  float: left;
+  width: 350px;
+  margin: 3px 5px;
+  position: relative;
+}
+
+.white-popup > ul > li > div {
+  position: absolute;
+  color: #fff;
+  font-size: 1.4rem;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  margin-top: -25px;
+  margin-left: -25px;
+}
+
+.mfp-zoom-in {
+  /* start state */
+  /* animate in */
+  /* animate out */
+}
+
+.mfp-zoom-in .mfp-with-anim {
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  transform: scale(0.8);
+}
+
+.mfp-zoom-in.mfp-bg {
+  opacity: 0;
+  transition: all 0.3s ease-out;
+}
+
+.mfp-zoom-in.mfp-ready .mfp-with-anim {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.mfp-zoom-in.mfp-ready.mfp-bg {
+  opacity: 0.8;
+}
+
+.mfp-zoom-in.mfp-removing .mfp-with-anim {
+  transform: scale(0.8);
+  opacity: 0;
+}
+
+.mfp-zoom-in.mfp-removing.mfp-bg {
+  opacity: 0;
+}
+
 /*******************************************************************
 	* 디테일비주얼
 *******************************************************************/
 .mainVisual {
   width: 100%;
+  min-width: 1150px;
   height: 370px;
   margin: 0 auto;
   background: url("../images/main_visual_01.png") no-repeat 0/cover;
@@ -302,15 +480,49 @@ header .headerWrap > nav.gnb > ul > li.mobileMenu {
 .mainVisual .visualContents .visualContentsWrap > .contentBox > .imgBox {
   width: 300px;
   margin-right: 30px;
+  position: relative;
+  cursor: pointer;
+}
+
+.mainVisual .visualContents .visualContentsWrap > .contentBox > .imgBox:hover > .blind {
+  display: block;
 }
 
 .mainVisual .visualContents .visualContentsWrap > .contentBox > .imgBox img {
   display: inline-block;
   vertical-align: top;
+  width: 300px;
+  height: 225px;
 }
 
 .mainVisual .visualContents .visualContentsWrap > .contentBox > .imgBox img.mbImg {
   display: none;
+}
+
+.mainVisual .visualContents .visualContentsWrap > .contentBox > .imgBox > .blind {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.mainVisual .visualContents .visualContentsWrap > .contentBox > .imgBox > .blind > img {
+  width: 15px;
+  height: 27px;
+  position: absolute;
+  top: 50%;
+  margin-top: -13px;
+}
+
+.mainVisual .visualContents .visualContentsWrap > .contentBox > .imgBox > .blind > img.prev {
+  left: 10px;
+}
+
+.mainVisual .visualContents .visualContentsWrap > .contentBox > .imgBox > .blind > img.next {
+  right: 10px;
 }
 
 .mainVisual .visualContents .visualContentsWrap > .contentBox > .textBox {
@@ -350,6 +562,10 @@ header .headerWrap > nav.gnb > ul > li.mobileMenu {
 .mainVisual .visualContents .visualContentsWrap > .contentBox > .textBox > p {
   font-size: 1.4rem;
   margin: 20px 0 15px;
+}
+
+.mainVisual .visualContents .visualContentsWrap > .contentBox > .textBox > p > a {
+  color: #fff;
 }
 
 .mainVisual .visualContents .visualContentsWrap > .contentBox > .buttonBox > ul > li {
@@ -393,6 +609,78 @@ header .headerWrap > nav.gnb > ul > li.mobileMenu {
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
+}
+
+/*******************************************************************
+	* 팝업정보
+*******************************************************************/
+.popup-gallery {
+  visibility: hidden;
+  height: 0;
+}
+
+.fieldEx {
+  width: 500px;
+  background: #fff;
+  margin: 0 auto;
+  padding: 70px;
+  border-radius: 15px;
+}
+
+.fieldEx h1 {
+  font-size: 2.4rem;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.fieldEx h1 span {
+  display: block;
+  font-size: 1.4rem;
+  color: #808080;
+}
+
+.fieldEx p {
+  font-size: 1.6rem;
+  margin-bottom: 30px;
+}
+
+.bubblePop {
+  width: 250px;
+  height: 500px;
+  overflow: hidden;
+  background: #fff;
+  margin: 0 auto;
+  border-radius: 15px;
+}
+
+.bubblePop h1 {
+  font-size: 1.2rem;
+  color: #737f86;
+  border-bottom: solid 1px #dce3e4;
+  padding: 15px;
+}
+
+.bubblePop ul {
+  width: 70%;
+  margin: 10px auto;
+}
+
+.bubblePop ul > li {
+  padding: 5px 0;
+}
+
+.bubblePop ul > li > span {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 13px;
+}
+
+.bubblePop ul > li > span.likeProfile {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
 }
 
 /*******************************************************************
@@ -523,6 +811,10 @@ header .headerWrap > nav.gnb > ul > li.mobileMenu {
   margin: 0 10px;
 }
 
+.contents .contentsWrap > .rightBox .normalRankArea {
+  display: none;
+}
+
 .contents .contentsWrap > .rightBox > .awards > ul > li {
   height: 48px;
   line-height: 48px;
@@ -599,6 +891,26 @@ header .headerWrap > nav.gnb > ul > li.mobileMenu {
   background: #eff0f4;
 }
 
+.contents .contentsWrap > .fieldinfoBox > .fieldinfo .fiedText {
+  margin-left: 30px;
+}
+
+.contents .contentsWrap > .fieldinfoBox > .fieldinfo .fiedText > div {
+  font-size: 1.2rem;
+  color: #9095a1;
+  padding: 20px 0;
+}
+
+.contents .contentsWrap > .fieldinfoBox > .fieldinfo .fiedText > div span {
+  display: block;
+  color: #3b4458;
+  font-size: 1.8rem;
+}
+
+.contents .contentsWrap > .fieldinfoBox > .fieldinfo .fiedText > div:last-child {
+  margin-right: 0;
+}
+
 .contents .contentsWrap > .fieldinfoBox > .fieldinfo > ul {
   margin-left: 30px;
 }
@@ -619,10 +931,6 @@ header .headerWrap > nav.gnb > ul > li.mobileMenu {
 
 .contents .contentsWrap > .fieldinfoBox > .fieldinfo > ul li:last-child {
   margin-right: 0;
-}
-
-.contents .contentsWrap > .fieldinfoBox > .fieldinfo > .chartBox {
-  overflow: hidden;
 }
 
 .contents .contentsWrap > .fieldinfoBox > .fieldinfo > .chartBox .snsChart {
@@ -712,12 +1020,40 @@ header .headerWrap > nav.gnb > ul > li.mobileMenu {
   border-radius: 50%;
 }
 
-.contents .contentsWrap > .fieldinfoBox > .fieldinfo > .chartBox .snsValueBox > li.likePeople p {
+.contents .contentsWrap > .fieldinfoBox > .fieldinfo > .chartBox .snsValueBox > li.likePeople > div {
   color: #808080;
 }
 
-.contents .contentsWrap > .fieldinfoBox > .fieldinfo > .chartBox .snsValueBox > li.likePeople p strong {
+.contents .contentsWrap > .fieldinfoBox > .fieldinfo > .chartBox .snsValueBox > li.likePeople > div strong {
   color: #111;
+  position: relative;
+  cursor: pointer;
+}
+
+.contents .contentsWrap > .fieldinfoBox > .fieldinfo > .chartBox .snsValueBox > li.likePeople > div strong > ul {
+  display: none;
+  position: absolute;
+  background: #111111;
+  left: 0;
+  top: 100%;
+  width: 60px;
+  padding: 8px;
+  border-radius: 10px;
+  z-index: 9;
+  color: #fff;
+  font-weight: normal;
+}
+
+.contents .contentsWrap > .fieldinfoBox > .fieldinfo > .chartBox .snsValueBox > li.likePeople > div strong > ul a {
+  color: #fff;
+}
+
+.contents .contentsWrap > .fieldinfoBox > .fieldinfo > .chartBox .snsValueBox > li.likePeople > div strong:hover > ul {
+  display: inline-block;
+}
+
+.contents .contentsWrap > .fieldinfoBox > .fieldinfo > .chartBox .snsValueBox > li.likePeople > div > span {
+  cursor: pointer;
 }
 
 .contents .contentsWrap p.boxTitle {
@@ -1006,10 +1342,21 @@ header .headerWrap > nav.gnb > ul > li.mobileMenu {
   width: 240px;
   height: 135px;
   overflow: hidden;
+  cursor: pointer;
+  position: relative;
 }
 
 .contents .contentsWrap .reardBox .regardList > li .regardImg img {
   width: 100%;
+}
+
+.contents .contentsWrap .reardBox .regardList > li .regardImg .playBtn {
+  position: absolute;
+  width: 50px;
+  top: 50%;
+  left: 50%;
+  margin-left: -25px;
+  margin-top: -25px;
 }
 
 .contents .contentsWrap .reardBox .regardList > li .regardMovieText {
@@ -1055,6 +1402,7 @@ header .headerWrap > nav.gnb > ul > li.mobileMenu {
 @media screen and (max-width: 1024px) {
   .mainVisual {
     height: 1120px;
+    min-width: 100%;
   }
   .mainVisual .visualContents .visualContentsWrap {
     width: 90%;

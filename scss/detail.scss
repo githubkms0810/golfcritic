@@ -8,6 +8,7 @@
 *******************************************************************/
 .mainVisual {
     width:100%;
+    min-width: 1150px;
     height:370px;
     margin:0 auto;
     background:url('../images/main_visual_01.png') no-repeat 0 / cover;
@@ -24,10 +25,30 @@
                 > div { float: left;}
                 > .imgBox { 
                     width:300px; margin-right:30px;
+                    position:relative;
+                    cursor: pointer;
+                    &:hover {
+                        > .blind { display:block;}
+                    }
                     img { 
                         display:inline-block;
                         vertical-align: top;
+                        width:300px; height:225px;
                         &.mbImg { display:none;}
+                    }
+                    > .blind {
+                        position: absolute;
+                        top:0; left:0;
+                        width:100%; height:100%;
+                        background: rgba(0,0,0,0.5);
+                        display:none;
+                        > img { 
+                            width:15px; height:27px;
+                            position: absolute;
+                            top:50%; margin-top:-13px;
+                            &.prev { left:10px;}
+                            &.next { right:10px;}
+                        }
                     }
                 }
                 > .textBox {
@@ -50,6 +71,7 @@
                     > p {
                         font-size:1.4rem;
                         margin:20px 0 15px;
+                        > a { color:#fff;}
                     }
                 }
 
@@ -87,6 +109,57 @@
                 }
             }
             
+        }
+    }
+}
+
+
+
+
+/*******************************************************************
+	* 팝업정보
+*******************************************************************/
+.popup-gallery {  visibility: hidden; height:0;}
+.fieldEx {
+    width:500px;
+    background:#fff;
+    margin:0 auto;
+    padding:70px;
+    border-radius: 15px;
+    h1 {
+        font-size:2.4rem;
+        text-align:center;
+        margin-bottom:40px;
+        span { display:block; font-size:1.4rem; color:#808080}
+    }
+    p { font-size:1.6rem; margin-bottom:30px;}
+}
+.bubblePop {
+    width:250px; height: 500px; overflow: hidden;
+    background:#fff;
+    margin:0 auto;
+    border-radius: 15px;
+    h1 {
+        font-size:1.2rem;
+        color:#737f86;
+        border-bottom:solid 1px #dce3e4;
+        padding:15px;
+    }
+    ul {
+        width:70%;
+        margin:10px auto;
+        > li {
+            padding:5px 0;
+            > span { 
+                display: inline-block; vertical-align: middle;
+                font-size:13px;
+                &.likeProfile {
+                    width:40px; height:40px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    margin-right:10px;
+                }
+            }
         }
     }
 }
@@ -180,6 +253,8 @@
                 }
             }
 
+            .normalRankArea { display:none;}
+
             > .awards {
                 > ul > li {
                     height:48px; line-height: 48px;
@@ -239,6 +314,20 @@
             float:left;
             > .fieldinfo {
                 background: #eff0f4;
+                .fiedText {
+                    margin-left:30px;
+                    > div {
+                        font-size:1.2rem;
+                        color:#9095a1;
+                        padding:20px 0;
+                        span{
+                            display:block;
+                            color:#3b4458;
+                            font-size:1.8rem;
+                        }
+                        &:last-child{ margin-right:0;}
+                    }
+                }
                 > ul {
                     margin-left:30px;
                     li {
@@ -259,7 +348,7 @@
 
                 // 차트 / sns평가
                 > .chartBox {
-                    overflow: hidden;
+                    
                     .snsChart {
                         width:400px; height:400px;
                         margin-top:-20px; margin-left:-15px;
@@ -321,9 +410,31 @@
                                         border-radius: 50%;
                                     }   
                                 }
-                                p { 
+                                >div { 
                                     color:#808080;
-                                    strong{ color:#111;}
+                                    strong{ 
+                                        color:#111; position: relative;
+                                        cursor:pointer;
+                                        > ul {
+                                            display: none;
+                                            position: absolute;
+                                            background: #111111;
+                                            left: 0;
+                                            top: 100%;
+                                            width:60px;
+                                            padding: 8px;
+                                            border-radius: 10px;
+                                            z-index: 9;
+                                            color: #fff;
+                                            font-weight: normal;
+                                            a { color:#fff;}
+                                        }
+                                        &:hover { 
+                                            > ul { display:inline-block;}
+                                        }
+                                    }
+                                    > span { cursor: pointer;}
+                                    
                                 }
                             }
                         }
@@ -534,7 +645,17 @@
                         display:inline-block;
                         width:240px; height: 135px;
                         overflow: hidden;
+                        cursor: pointer;
+                        position: relative;
                         img { width:100%;}
+                        .playBtn { 
+                            position: absolute;
+                            width: 50px;
+                            top: 50%;
+                            left: 50%;
+                            margin-left: -25px;
+                            margin-top: -25px;
+                        }
                     }
                     .regardMovieText { 
                         display: inline-block;
@@ -576,6 +697,7 @@
 @include tab{
     .mainVisual {
         height:1120px;
+        min-width: 100%;
         .visualContents{
             .visualContentsWrap{
                 width:90%;
@@ -819,3 +941,9 @@
         padding-bottom:5px;
     }
 }
+
+
+
+
+
+
