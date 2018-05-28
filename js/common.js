@@ -4,6 +4,8 @@ $(document).ready(function(){
     gallery();
     likeEv();
     areaRank();
+
+    $('.datapicker').datepicker();
     //// 나라선택 팝업
     $('.country').magnificPopup({
         delegate: 'a',
@@ -36,6 +38,23 @@ $(document).ready(function(){
 		}
     });
     
+    $('.commentPhoto').magnificPopup({
+		delegate: 'li',
+		type: 'image',
+		tLoading: 'Loading image #%curr%...',
+		mainClass: 'mfp-img-mobile',
+		gallery: {
+			enabled: true,
+			navigateByImgClick: true,
+			preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+		},
+		image: {
+			tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+			titleSrc: function(item) {
+				return item.el.attr('title') + '<small>by Marsel Van Oosten</small>';
+			}
+		}
+    });
 
     /// 필드정보 텍스트팝업
     $('.simple-ajax-popup-align-top').magnificPopup({
@@ -67,6 +86,17 @@ $(document).ready(function(){
         }
         }
     });
+
+    // 유투브 
+    $('.popup-youtube').magnificPopup({
+		disableOn: 700,
+		type: 'iframe',
+		mainClass: 'mfp-fade',
+		removalDelay: 160,
+		preloader: false,
+
+		fixedContentPos: false
+	});
 
 })
 
@@ -105,17 +135,21 @@ function gallery() {
 
 function likeEv() {
     var likeEv = $(".likeEv");
-    var likeEvidx = $(".likeEv").prop("idx" , true);
-    console.log("AA")
+
+    for( var i=0,len=likeEv.length; i<len; i++){
+        likeEv[i].idx = true;
+    }
+
     likeEv.on("click" , function(){
-        if( likeEv.prop("idx") == true){
+        if( $(this).prop("idx") == true){
             $(this).children("img").attr("src", "./images/likeBtn_on.png");
             $(this).prop("idx",false);
+            console.log($(this).prop("idx"))
         } else {
             $(this).children("img").attr("src" , "./images/likeBtn.png")
             $(this).prop("idx",true);
+            console.log($(this).prop("idx"))
         }
-        console.log("AA")
     })
 }
 

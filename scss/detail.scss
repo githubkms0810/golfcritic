@@ -487,6 +487,7 @@
                     color:#fff;
                     font-size:1.3rem;
                 }
+                .datapicker { margin-top:10px; margin-left:10px;}
             }
         }
 
@@ -576,6 +577,7 @@
                     .likeBtnBox{
                         position:absolute;
                         top:40px; right:20px;
+                        cursor: pointer; 
                         img { cursor: pointer;}
                     }
                     .commentPhoto {

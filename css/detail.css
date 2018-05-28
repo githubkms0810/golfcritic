@@ -1110,6 +1110,11 @@ header .headerWrap > nav.gnb > ul > li.mobileMenu {
   font-size: 1.3rem;
 }
 
+.contents .contentsWrap > .commentBox .commentBoxWrap .datapicker {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
 .contents .contentsWrap > .commentView {
   width: 853px;
   float: left;
@@ -1260,6 +1265,7 @@ header .headerWrap > nav.gnb > ul > li.mobileMenu {
   position: absolute;
   top: 40px;
   right: 20px;
+  cursor: pointer;
 }
 
 .contents .contentsWrap > .commentView .viewList > li .likeBtnBox img {
