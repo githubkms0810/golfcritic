@@ -141,6 +141,7 @@ header .headerWrap > .serchBox input {
   margin-left: 20px;
   font-size: 1.4rem;
   width: 100%;
+  font-family: "Noto Sans KR", sans-serif;
 }
 
 header .headerWrap > .serchBox input::placeholder {
@@ -179,6 +180,17 @@ header .headerWrap > nav.gnb > ul > li .profileImg {
 
 header .headerWrap > nav.gnb > ul > li:last-child {
   margin-right: 0px;
+}
+
+header .headerWrap > nav.gnb > ul > li:last-child span {
+  position: relative;
+  display: inline-block;
+}
+
+header .headerWrap > nav.gnb > ul > li:last-child span .profileDot {
+  position: absolute;
+  right: 10px;
+  bottom: 0;
 }
 
 header .headerWrap > nav.gnb > ul > li.mobileMenu {

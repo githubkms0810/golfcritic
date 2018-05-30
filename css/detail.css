@@ -141,6 +141,7 @@ header .headerWrap > .serchBox input {
   margin-left: 20px;
   font-size: 1.4rem;
   width: 100%;
+  font-family: "Noto Sans KR", sans-serif;
 }
 
 header .headerWrap > .serchBox input::placeholder {
@@ -179,6 +180,17 @@ header .headerWrap > nav.gnb > ul > li .profileImg {
 
 header .headerWrap > nav.gnb > ul > li:last-child {
   margin-right: 0px;
+}
+
+header .headerWrap > nav.gnb > ul > li:last-child span {
+  position: relative;
+  display: inline-block;
+}
+
+header .headerWrap > nav.gnb > ul > li:last-child span .profileDot {
+  position: absolute;
+  right: 10px;
+  bottom: 0;
 }
 
 header .headerWrap > nav.gnb > ul > li.mobileMenu {
@@ -321,6 +333,10 @@ header .headerWrap > nav.gnb > ul > li.mobileMenu {
   border-right: solid 1px #fff;
 }
 
+.mainVisual .visualContents .visualContentsWrap > .contentBox > .textBox > ul > li a {
+  color: #fff;
+}
+
 .mainVisual .visualContents .visualContentsWrap > .contentBox > .textBox > h2 {
   font-size: 3.8rem;
 }
@@ -354,11 +370,13 @@ header .headerWrap > nav.gnb > ul > li.mobileMenu {
 .mainVisual .visualContents .visualContentsWrap > .contentBox > .buttonBox > ul > li.likeBtn a {
   color: #111;
   font-size: 1.3rem;
+  display: block;
 }
 
 .mainVisual .visualContents .visualContentsWrap > .contentBox > .buttonBox > ul > li.shareBtn a {
   color: #fff;
   font-size: 1.3rem;
+  display: block;
 }
 
 .mainVisual .visualContents .visualContentsWrap > .contentBox > .ratingBox {
@@ -545,6 +563,10 @@ header .headerWrap > nav.gnb > ul > li.mobileMenu {
   right: 15px;
 }
 
+.contents .contentsWrap > .rightBox > .courseRank > ul > li > a {
+  display: block;
+}
+
 .contents .contentsWrap > .rightBox .allSee {
   height: 40px !important;
   line-height: 40px !important;
@@ -629,7 +651,12 @@ header .headerWrap > nav.gnb > ul > li.mobileMenu {
 }
 
 .contents .contentsWrap > .fieldinfoBox > .fieldinfo > .chartBox .snsValueBox > li .snsProfile {
+  display: inline-block;
   vertical-align: middle;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 .contents .contentsWrap > .fieldinfoBox > .fieldinfo > .chartBox .snsValueBox > li dl {
@@ -679,6 +706,10 @@ header .headerWrap > nav.gnb > ul > li.mobileMenu {
 .contents .contentsWrap > .fieldinfoBox > .fieldinfo > .chartBox .snsValueBox > li.likePeople > ul > li {
   float: left;
   margin-right: 5px;
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  border-radius: 50%;
 }
 
 .contents .contentsWrap > .fieldinfoBox > .fieldinfo > .chartBox .snsValueBox > li.likePeople p {
@@ -966,10 +997,19 @@ header .headerWrap > nav.gnb > ul > li.mobileMenu {
   margin-bottom: 30px;
 }
 
+.contents .contentsWrap .reardBox .regardList > li > p a {
+  color: #808080;
+}
+
 .contents .contentsWrap .reardBox .regardList > li .regardImg {
   display: inline-block;
   width: 240px;
   height: 135px;
+  overflow: hidden;
+}
+
+.contents .contentsWrap .reardBox .regardList > li .regardImg img {
+  width: 100%;
 }
 
 .contents .contentsWrap .reardBox .regardList > li .regardMovieText {
@@ -979,18 +1019,34 @@ header .headerWrap > nav.gnb > ul > li.mobileMenu {
   margin-left: 14px;
 }
 
+.contents .contentsWrap .reardBox .regardList > li .regardMovieText p a {
+  color: #808080;
+}
+
 .contents .contentsWrap .reardBox .regardList.movie > li {
   margin-bottom: 6px;
 }
 
 .contents .contentsWrap .reardBox .regardList.photo > li {
   float: left;
+  width: 79px;
+  height: 79px;
+  overflow: hidden;
   margin-right: 7px;
   margin-bottom: 7px;
 }
 
 .contents .contentsWrap .reardBox .regardList.photo > li:nth-child(10n) {
   margin-right: 0;
+}
+
+.contents .contentsWrap .reardBox .regardList.photo > li img {
+  width: 100%;
+  height: 79px;
+}
+
+.contents .contentsWrap .reardBox .regardPhoto {
+  margin-top: 25px;
 }
 
 /*******************************************************************

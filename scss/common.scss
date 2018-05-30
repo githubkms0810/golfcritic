@@ -97,6 +97,7 @@ header{
                 margin-top:5px; margin-left:20px;
                 font-size:1.4rem;
                 width:100%;
+                font-family: "Noto Sans KR", sans-serif;
                 &::placeholder { color:#d6d6d6;}
                 &:-ms-input-placeholder { /* Internet Explorer 10-11 */
                     color:#d6d6d6;
@@ -117,7 +118,14 @@ header{
                 font-size:1.4rem;
                 img { vertical-align:middle;}
                 .profileImg{ margin-right:10px;}
-                &:last-child{ margin-right:0px;}
+                &:last-child{ 
+                    margin-right:0px;
+                    span { 
+                        position: relative; display:inline-block;
+                        .profileDot { position:absolute; right:10px; bottom:0;}
+                    }
+
+                }
                 &.mobileMenu{ display:none;}
             }
         }
