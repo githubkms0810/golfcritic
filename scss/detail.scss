@@ -105,14 +105,53 @@
                         text-align:center;
                         vertical-align: middle;
                         cursor:pointer;
+                        position:relative;
+                        &:hover{ 
+                            > .starBox { display:block;}
+                        }
+                        > .starBox {
+                            display:none;
+                            position: absolute;
+                            top:-100%; left:-20px;
+                            width:50px;
+                            > ul {
+                                > li { 
+                                    display:inline-block;
+                                }
+                            }
+                        }
                     }
                 }
             }
-            
         }
     }
 }
-
+.ratingBox2 {
+    position: relative;
+    > ul > li {
+        height: 20px; line-height: 20px;
+        display: inline-block;
+        margin-left:15px;
+        text-align:center;
+        vertical-align: middle;
+        cursor:pointer;
+        position:relative;
+        &:hover{ 
+            > .starBox2 { display:block;}
+        }
+        > .starBox2 {
+            display:none;
+            position: absolute;
+            top:-100%; left:-20px;
+            width:50px;
+            > ul {
+                > li { 
+                    display:inline-block;
+                }
+            }
+        }
+    }
+}
 
 
 
@@ -445,12 +484,25 @@
 
 
         // 평가남기기
-        p.boxTitle{
+        .boxTitle{
             height:40px; line-height: 40px;
             font-size:1.3rem;
             background:#eff0f4; color:#3b4458;
             text-indent:20px;
-            border-right:solid 1px #e6e6e6
+            border-right:solid 1px #e6e6e6;
+            position: relative;
+            > ul {
+                position: absolute;
+                top :0; right:10px;
+                li { 
+                    display: inline-block;
+                    line-height: 1;
+                    text-indent: 0;
+                    padding: 0 10px;
+                    cursor: pointer;
+                    &:first-child { border-right:solid 1px #3b4458;}
+                }
+            }
         }
 
         > .commentBox {
@@ -692,6 +744,55 @@
     }
 }
 
+
+/*******************************************************************
+	* Pc 반응형
+*******************************************************************/
+
+@media screen and (min-width: 1025px) and (max-width: 1201px) {
+    .mainVisual { 
+        min-width:1024px;
+        .visualContents .visualContentsWrap {
+            width:100%;
+            > .contentBox {
+                margin-bottom:20px;
+                > .textBox {
+                    width:650px;  
+                }
+                > .ratingBox {
+                    right:30px;
+                }
+            }
+        }
+    }
+    .contents {
+        .contentsWrap {
+            width: 1024px;
+            > .rightBox {
+                float: none;
+                width: 100%;
+                > div { 
+                    width:100%;
+                    &.courseRank  { display:none;}
+                    &.goodText   { display:none;}
+                }
+            }
+            
+            .fieldinfoBox {
+                width:100%;
+            }
+            .commentBox { width:100%;}
+            .commentView { width:100%;}
+            .reardBox { 
+                width:100%;
+                .regardList.photo > li:nth-child(10n) { margin-right: 7px;}
+            }
+            
+        }
+    }
+}
+
+
 /*******************************************************************
 	* 테블릿 반응형
 *******************************************************************/
@@ -787,15 +888,22 @@
                 margin:0 auto;
                 float:none;
                 .proComment { width:100%; float:none;}
-                .normalComment { display:none;}
+                .normalComment {  width:100%; float:none; display:none;}
                 .allSee { width:100%;}
             }
             .reardBox {
                 width:90%;
                 margin:0 auto;
                 .regardList{
-                    >li .regardMovieText {
-                        width:60%;
+                    >li {
+                        .regardMovieText {
+                            width:80%;
+                            margin-left:0;
+                        }
+                        .regardImg {
+                            margin-top:20px;
+                            width:100%; height:auto;
+                        }
                     }
                 }
             }
@@ -807,6 +915,8 @@
 /*******************************************************************
 	* 모바일 반응형
 *******************************************************************/
+
+
 
 @include mob{
     .mainVisual {
@@ -913,6 +1023,9 @@
                         .regardMovieText {
                             width:100%; margin-left:0;
                             margin-bottom:10px;
+                        }
+                        .regardImg {
+                            width:100%; height:auto;
                         }
                     }
                 }

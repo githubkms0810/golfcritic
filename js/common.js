@@ -4,6 +4,8 @@ $(document).ready(function(){
     gallery();
     likeEv();
     areaRank();
+    ratingStar();
+    commentBox()
 
     $('.datapicker').datepicker();
     //// 나라선택 팝업
@@ -166,5 +168,98 @@ function areaRank() {
     nomalRank.on("click" , function(){
         nomalRankArea.show();
         proRankArea.hide();
+    })
+}
+
+
+function ratingStar() {
+    var ratingList = $(".ratingBox > ul > li");
+    var ratingList2 = $(".ratingBox2 > ul > li");
+    var starBoxList = $(".starBox > ul > li");
+    var starBoxList2 = $(".starBox2 > ul > li");
+    var hoverIdx;
+    var imgIdx
+    ratingList.hover(function(){
+        imgIdx = $(this).children("img").attr("src")
+        hoverIdx = $(this).index()
+        if( imgIdx == "./images/rating_star.png" || imgIdx == "./images/rating_star_normal.png"){
+            return hoverIdx;
+        } else {
+            $(this).children("img").attr("src" , "./images/rating_hover.png")
+        }
+        return hoverIdx;
+    }, function(){
+        imgIdx = $(this).children("img").attr("src")
+        if( imgIdx == "./images/rating_star.png" || imgIdx == "./images/rating_star_normal.png"){
+            return
+        } else {
+            $(this).children("img").attr("src" , "./images/rating_normal.png")
+        }
+    });
+    starBoxList.on("click" , function(){
+        var imgSrc = $(this).children("img").attr("src")
+        ratingList.children("img").attr("src" , "./images/rating_normal.png")
+        for( var i=0, len=hoverIdx+1; i<len; i++ ){
+            ratingList.eq(i).children("img").attr("src" , imgSrc)
+        }
+        
+        if( $(this).children("img").attr("src") == "./images/rating_star_normal.png") {
+            console.log("AA")
+            for( var i=0, len=hoverIdx; i<len; i++ ){
+                ratingList.eq(i).children("img").attr("src" , "./images/rating_star.png")
+            }
+            ratingList.eq(hoverIdx).children("img").attr("src" , "./images/rating_star_normal.png")
+        }
+    });
+
+
+    ratingList2.hover(function(){
+        imgIdx = $(this).children("img").attr("src")
+        hoverIdx = $(this).index()
+        if( imgIdx == "./images/rating_star.png" || imgIdx == "./images/rating_star_normal.png"){
+            return hoverIdx;
+        } else {
+            $(this).children("img").attr("src" , "./images/rating_hover.png")
+        }
+        return hoverIdx;
+    }, function(){
+        imgIdx = $(this).children("img").attr("src")
+        if( imgIdx == "./images/rating_star.png" || imgIdx == "./images/rating_star_normal.png"){
+            return
+        } else {
+            $(this).children("img").attr("src" , "./images/rating_normal2.png")
+        }
+    });
+
+    starBoxList2.on("click" , function(){
+        var imgSrc = $(this).children("img").attr("src")
+        ratingList2.children("img").attr("src" , "./images/rating_normal2.png")
+        for( var i=0, len=hoverIdx+1; i<len; i++ ){
+            ratingList2.eq(i).children("img").attr("src" , imgSrc)
+        }
+        
+        if( $(this).children("img").attr("src") == "./images/rating_star_normal.png") {
+            for( var i=0, len=hoverIdx; i<len; i++ ){
+                ratingList2.eq(i).children("img").attr("src" , "./images/rating_star.png")
+            }
+            ratingList2.eq(hoverIdx).children("img").attr("src" , "./images/rating_star_normal.png")
+        }
+    });
+
+}
+
+function commentBox() {
+    var boxTitleList = $(".boxTitle > ul > li")
+    var proComment = $(".proComment");
+    var normalComment = $(".normalComment");
+    boxTitleList.on("click" , function(){
+        var idx = $(this).index()
+        if ( idx == 0 ){
+            proComment.show();
+            normalComment.hide();
+        } else {
+            proComment.hide();
+            normalComment.show();
+        }
     })
 }

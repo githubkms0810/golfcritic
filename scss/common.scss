@@ -17,7 +17,7 @@
 // --------------------------------------------------
  
 // Break Point (Desktop First 기준 내림차순 설정)
-$desktop-l-width	: 1440px;
+$desktop-l-width	: 1200px;
 $tablet-l-width		: 1024px;
 $tablet-s-width		: 768px;
 $mob-l-width		: 640px;
@@ -32,11 +32,11 @@ $mob-s-width		: 375px;
 }
 // PC large
 @mixin pc-large {
-	@media screen and (min-width: #{$desktop-l-width + 1}) {
+	@media screen and (min-width: #{$tablet-l-width + 1}) and (max-width:#{$desktop-l-width+1}) {
 		@content;
 	}
 }
- 
+
 // --------------------------------------------------
  
 // 태블릿
@@ -75,7 +75,7 @@ $mob-s-width		: 375px;
 
 header{
     width:100%; height:80px;
-    min-width: 1150px;
+    min-width: 1024px;
     margin:0 auto;
     background:#ffffff;
     .headerWrap {
@@ -187,8 +187,10 @@ header{
                         }
                         > ul {
                             > li {
+                                display:block !important;
                                 padding: 5px 0;
                                 text-align: center;
+                                z-index: 99;
                             }
                             &.dropsubMenu {
                                 border-top:solid 1px #e1e1e1;
@@ -208,6 +210,13 @@ header{
 /*******************************************************************
 	* 반응형 
 *******************************************************************/
+@include pc-large {
+    .contents .contentsWrap > .rightBox { float:none; width:100%;}
+}
+
+
+
+
 @include tab{
 	header{
         min-width: auto;

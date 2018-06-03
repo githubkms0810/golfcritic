@@ -111,7 +111,7 @@ caption {
 header {
   width: 100%;
   height: 80px;
-  min-width: 1150px;
+  min-width: 1024px;
   margin: 0 auto;
   background: #ffffff;
 }
@@ -276,8 +276,10 @@ header .headerWrap > nav.gnb > ul > li:last-child .dropMenu img {
 }
 
 header .headerWrap > nav.gnb > ul > li:last-child .dropMenu > ul > li {
+  display: block !important;
   padding: 5px 0;
   text-align: center;
+  z-index: 99;
 }
 
 header .headerWrap > nav.gnb > ul > li:last-child .dropMenu > ul.dropsubMenu {
@@ -291,6 +293,13 @@ header .headerWrap > nav.gnb > ul > li.mobileMenu {
 /*******************************************************************
 	* 반응형 
 *******************************************************************/
+@media screen and (min-width: 1025px) and (max-width: 1201px) {
+  .contents .contentsWrap > .rightBox {
+    float: none;
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   header {
     min-width: auto;
@@ -609,6 +618,54 @@ header .headerWrap > nav.gnb > ul > li.mobileMenu {
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
+  position: relative;
+}
+
+.mainVisual .visualContents .visualContentsWrap > .contentBox > .ratingBox > ul > li:hover > .starBox {
+  display: block;
+}
+
+.mainVisual .visualContents .visualContentsWrap > .contentBox > .ratingBox > ul > li > .starBox {
+  display: none;
+  position: absolute;
+  top: -100%;
+  left: -20px;
+  width: 50px;
+}
+
+.mainVisual .visualContents .visualContentsWrap > .contentBox > .ratingBox > ul > li > .starBox > ul > li {
+  display: inline-block;
+}
+
+.ratingBox2 {
+  position: relative;
+}
+
+.ratingBox2 > ul > li {
+  height: 20px;
+  line-height: 20px;
+  display: inline-block;
+  margin-left: 15px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  position: relative;
+}
+
+.ratingBox2 > ul > li:hover > .starBox2 {
+  display: block;
+}
+
+.ratingBox2 > ul > li > .starBox2 {
+  display: none;
+  position: absolute;
+  top: -100%;
+  left: -20px;
+  width: 50px;
+}
+
+.ratingBox2 > ul > li > .starBox2 > ul > li {
+  display: inline-block;
 }
 
 /*******************************************************************
@@ -1056,7 +1113,7 @@ header .headerWrap > nav.gnb > ul > li.mobileMenu {
   cursor: pointer;
 }
 
-.contents .contentsWrap p.boxTitle {
+.contents .contentsWrap .boxTitle {
   height: 40px;
   line-height: 40px;
   font-size: 1.3rem;
@@ -1064,6 +1121,25 @@ header .headerWrap > nav.gnb > ul > li.mobileMenu {
   color: #3b4458;
   text-indent: 20px;
   border-right: solid 1px #e6e6e6;
+  position: relative;
+}
+
+.contents .contentsWrap .boxTitle > ul {
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+
+.contents .contentsWrap .boxTitle > ul li {
+  display: inline-block;
+  line-height: 1;
+  text-indent: 0;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.contents .contentsWrap .boxTitle > ul li:first-child {
+  border-right: solid 1px #3b4458;
 }
 
 .contents .contentsWrap > .commentBox {
@@ -1403,6 +1479,58 @@ header .headerWrap > nav.gnb > ul > li.mobileMenu {
 }
 
 /*******************************************************************
+	* Pc 반응형
+*******************************************************************/
+@media screen and (min-width: 1025px) and (max-width: 1201px) {
+  .mainVisual {
+    min-width: 1024px;
+  }
+  .mainVisual .visualContents .visualContentsWrap {
+    width: 100%;
+  }
+  .mainVisual .visualContents .visualContentsWrap > .contentBox {
+    margin-bottom: 20px;
+  }
+  .mainVisual .visualContents .visualContentsWrap > .contentBox > .textBox {
+    width: 650px;
+  }
+  .mainVisual .visualContents .visualContentsWrap > .contentBox > .ratingBox {
+    right: 30px;
+  }
+  .contents .contentsWrap {
+    width: 1024px;
+  }
+  .contents .contentsWrap > .rightBox {
+    float: none;
+    width: 100%;
+  }
+  .contents .contentsWrap > .rightBox > div {
+    width: 100%;
+  }
+  .contents .contentsWrap > .rightBox > div.courseRank {
+    display: none;
+  }
+  .contents .contentsWrap > .rightBox > div.goodText {
+    display: none;
+  }
+  .contents .contentsWrap .fieldinfoBox {
+    width: 100%;
+  }
+  .contents .contentsWrap .commentBox {
+    width: 100%;
+  }
+  .contents .contentsWrap .commentView {
+    width: 100%;
+  }
+  .contents .contentsWrap .reardBox {
+    width: 100%;
+  }
+  .contents .contentsWrap .reardBox .regardList.photo > li:nth-child(10n) {
+    margin-right: 7px;
+  }
+}
+
+/*******************************************************************
 	* 테블릿 반응형
 *******************************************************************/
 @media screen and (max-width: 1024px) {
@@ -1505,6 +1633,8 @@ header .headerWrap > nav.gnb > ul > li.mobileMenu {
     float: none;
   }
   .contents .contentsWrap .commentView .normalComment {
+    width: 100%;
+    float: none;
     display: none;
   }
   .contents .contentsWrap .commentView .allSee {
@@ -1515,7 +1645,13 @@ header .headerWrap > nav.gnb > ul > li.mobileMenu {
     margin: 0 auto;
   }
   .contents .contentsWrap .reardBox .regardList > li .regardMovieText {
-    width: 60%;
+    width: 80%;
+    margin-left: 0;
+  }
+  .contents .contentsWrap .reardBox .regardList > li .regardImg {
+    margin-top: 20px;
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -1640,6 +1776,10 @@ header .headerWrap > nav.gnb > ul > li.mobileMenu {
     width: 100%;
     margin-left: 0;
     margin-bottom: 10px;
+  }
+  .contents .contentsWrap .reardBox .regardList > li .regardImg {
+    width: 100%;
+    height: auto;
   }
 }
 
