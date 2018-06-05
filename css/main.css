@@ -576,7 +576,7 @@ header .headerWrap > nav.gnb > ul > li.mobileMenu {
 
 .contents .mainWrap .topBox > div.commentBox .gradationBox {
   position: absolute;
-  bottom: -3px;
+  bottom: -4px;
   left: 0;
 }
 
@@ -598,7 +598,7 @@ header .headerWrap > nav.gnb > ul > li.mobileMenu {
 
 .contents .mainWrap .topBox > div.newPersonComment {
   width: 521px;
-  margin-top: 8px;
+  margin-top: 9px;
   overflow: hidden;
 }
 

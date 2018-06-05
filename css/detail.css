@@ -1605,10 +1605,9 @@ header .headerWrap > nav.gnb > ul > li.mobileMenu {
     margin-right: 0;
   }
   .contents .contentsWrap .fieldinfoBox > .fieldinfo > .chartBox .snsChart {
-    width: 1000px;
-    height: 1000px;
-    margin-top: -100px;
-    margin-left: -90px;
+    width: 100%;
+    margin-top: 0px;
+    margin-left: 0px;
     float: none;
   }
   .contents .contentsWrap .fieldinfoBox > .fieldinfo > .chartBox .snsValueBox {
