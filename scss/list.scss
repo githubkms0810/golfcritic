@@ -85,13 +85,14 @@ html {
                 }
             }
         }
-
+        > .mbSerchList { display:none;}
 
         // 페이져
         .pager {
             text-align:center;
             margin-top:50px;
             margin-bottom:150px;
+            &.mobile { display:none}
             > ul {
                 > li {
                     display:inline-block;
@@ -112,9 +113,122 @@ html {
                         span { border:solid 7px #666666; background:#fff;}
                     }
                     &.prevBtn { vertical-align: bottom; margin-right:10px;}
-                    &.nextBtn { vertical-align: bottom; margin-left:30px;}
+                    &.nextBtn { vertical-align: bottom; margin-left:30px;} 
                 }
             }
         }
     }
+}
+
+
+@include mob {
+	.contents  {
+        .listWrap {
+            width:90%; margin:0 auto;
+            > .searchBox {
+                padding:20% 0 0;
+                p { display:none;}
+            }
+            > .serchList { display:none;}
+
+            > .mbSerchList {
+                display:block;
+                > li {
+                    position:relative;
+                    box-shadow:0px 0px 20px 3px #ddd;
+                    margin:10% 0 25%;
+                    > .imgBox { 
+                        width:100%;
+                        img { width:100%; vertical-align: top;}
+                    }
+                    > .infoBox { 
+                        width: 80%;
+                        left: 50%;
+                        margin-left: -46%;
+                        bottom: -20%;
+                        border-radius: 10px;
+                        background: #fff;
+                        position: absolute;
+                        padding: 3% 6%;
+                        box-shadow: 0px 1px 7px 1px #ddd;
+                        > div  {
+                            font-size:2rem;
+                            margin-top:5%;
+                            &:first-child { 
+                                border-bottom:solid 1px #ddd;
+                                padding-bottom:5%;
+                            }
+                            .filedInfo { 
+                                display:inline-block;
+                                width:80%;
+                                vertical-align: middle;
+                                dt { font-weight: 900;}
+                                dd { 
+                                    color:#808080;
+                                    font-size:1.8rem;
+                                }
+                            }
+                            .pointBox {
+                                float:right;
+                                background: #68c53e;
+                                display: inline-block;
+                                color: #fff;
+                                font-weight: bold;
+                                line-height: 26px;
+                                text-align: center;
+                                line-height: 1;
+                                padding: 3%;
+                                border-radius: 10%;
+                                vertical-align: middle;
+                            }
+                            .memList{ 
+                                width:35%;
+                                display:inline-block;
+                                text-align: center;
+                                vertical-align: middle;
+                                li {
+                                    float:left;
+                                    width:40%;
+                                    margin-left:-10%;
+                                    overflow: hidden;
+                                    > img { width:100%;}
+                                }
+                            }
+                            .mbmText { 
+                                width:62%;
+                                display:inline-block;
+                                color:#808080;
+                                vertical-align: middle;
+                                
+                            }
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+
+    .contents .listWrap .pager {
+        margin: 20% 0;
+        display:none;
+        &.mobile { 
+            display:block;
+            > ul {
+                > li {
+                    margin-left:5%;
+                    &.prevBtn { margin-left:0;}
+                }
+            }
+        }
+    }
+}
+@include mob-mid {
+    html { font-size:50%;} 
+}
+
+
+@include mob-small {
+    html { font-size:35%;} 
+    header .headerWrap > .serchBox input { margin-left:5%;}
 }

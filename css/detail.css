@@ -135,6 +135,7 @@ header .headerWrap > .serchBox {
   border-left: solid 1px #e6e6e6;
   margin-top: 25px;
   position: relative;
+  overflow: hidden;
 }
 
 header .headerWrap > .serchBox input {
@@ -307,7 +308,7 @@ header .headerWrap > nav.gnb > ul > li.mobileMenu {
   header .headerWrap {
     width: 94%;
     max-width: 1024px;
-    min-width: 320px;
+    min-width: 90%;
     margin: 0 auto;
   }
   header .headerWrap nav.gnb ul > li {

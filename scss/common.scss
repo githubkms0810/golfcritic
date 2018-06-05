@@ -94,6 +94,7 @@ header{
             border-left:solid 1px #e6e6e6;
             margin-top:25px;
             position: relative;
+            overflow: hidden;
             input {  
                 border:none; 
                 margin-top:5px; margin-left:20px;
@@ -223,7 +224,7 @@ header{
         .headerWrap{
             width:94%;
             max-width: 1024px;
-            min-width:320px;
+            min-width:90%;
             margin:0 auto;
             nav.gnb{
                 ul > li {

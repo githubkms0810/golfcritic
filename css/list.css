@@ -135,6 +135,7 @@ header .headerWrap > .serchBox {
   border-left: solid 1px #e6e6e6;
   margin-top: 25px;
   position: relative;
+  overflow: hidden;
 }
 
 header .headerWrap > .serchBox input {
@@ -279,6 +280,7 @@ header .headerWrap > nav.gnb > ul > li:last-child .dropMenu > ul > li {
   display: block !important;
   padding: 5px 0;
   text-align: center;
+  z-index: 99;
 }
 
 header .headerWrap > nav.gnb > ul > li:last-child .dropMenu > ul.dropsubMenu {
@@ -306,7 +308,7 @@ header .headerWrap > nav.gnb > ul > li.mobileMenu {
   header .headerWrap {
     width: 94%;
     max-width: 1024px;
-    min-width: 320px;
+    min-width: 90%;
     margin: 0 auto;
   }
   header .headerWrap nav.gnb ul > li {
@@ -563,10 +565,18 @@ html {
   color: #808080;
 }
 
+.contents .listWrap > .mbSerchList {
+  display: none;
+}
+
 .contents .listWrap .pager {
   text-align: center;
   margin-top: 50px;
   margin-bottom: 150px;
+}
+
+.contents .listWrap .pager.mobile {
+  display: none;
 }
 
 .contents .listWrap .pager > ul > li {
@@ -601,5 +611,129 @@ html {
 .contents .listWrap .pager > ul > li.nextBtn {
   vertical-align: bottom;
   margin-left: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .contents .listWrap {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .contents .listWrap > .searchBox {
+    padding: 20% 0 0;
+  }
+  .contents .listWrap > .searchBox p {
+    display: none;
+  }
+  .contents .listWrap > .serchList {
+    display: none;
+  }
+  .contents .listWrap > .mbSerchList {
+    display: block;
+  }
+  .contents .listWrap > .mbSerchList > li {
+    position: relative;
+    box-shadow: 0px 0px 20px 3px #ddd;
+    margin: 10% 0 25%;
+  }
+  .contents .listWrap > .mbSerchList > li > .imgBox {
+    width: 100%;
+  }
+  .contents .listWrap > .mbSerchList > li > .imgBox img {
+    width: 100%;
+    vertical-align: top;
+  }
+  .contents .listWrap > .mbSerchList > li > .infoBox {
+    width: 80%;
+    left: 50%;
+    margin-left: -46%;
+    bottom: -20%;
+    border-radius: 10px;
+    background: #fff;
+    position: absolute;
+    padding: 3% 6%;
+    box-shadow: 0px 1px 7px 1px #ddd;
+  }
+  .contents .listWrap > .mbSerchList > li > .infoBox > div {
+    font-size: 2rem;
+    margin-top: 5%;
+  }
+  .contents .listWrap > .mbSerchList > li > .infoBox > div:first-child {
+    border-bottom: solid 1px #ddd;
+    padding-bottom: 5%;
+  }
+  .contents .listWrap > .mbSerchList > li > .infoBox > div .filedInfo {
+    display: inline-block;
+    width: 80%;
+    vertical-align: middle;
+  }
+  .contents .listWrap > .mbSerchList > li > .infoBox > div .filedInfo dt {
+    font-weight: 900;
+  }
+  .contents .listWrap > .mbSerchList > li > .infoBox > div .filedInfo dd {
+    color: #808080;
+    font-size: 1.8rem;
+  }
+  .contents .listWrap > .mbSerchList > li > .infoBox > div .pointBox {
+    float: right;
+    background: #68c53e;
+    display: inline-block;
+    color: #fff;
+    font-weight: bold;
+    line-height: 26px;
+    text-align: center;
+    line-height: 1;
+    padding: 3%;
+    border-radius: 10%;
+    vertical-align: middle;
+  }
+  .contents .listWrap > .mbSerchList > li > .infoBox > div .memList {
+    width: 35%;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+  }
+  .contents .listWrap > .mbSerchList > li > .infoBox > div .memList li {
+    float: left;
+    width: 40%;
+    margin-left: -10%;
+    overflow: hidden;
+  }
+  .contents .listWrap > .mbSerchList > li > .infoBox > div .memList li > img {
+    width: 100%;
+  }
+  .contents .listWrap > .mbSerchList > li > .infoBox > div .mbmText {
+    width: 62%;
+    display: inline-block;
+    color: #808080;
+    vertical-align: middle;
+  }
+  .contents .listWrap .pager {
+    margin: 20% 0;
+    display: none;
+  }
+  .contents .listWrap .pager.mobile {
+    display: block;
+  }
+  .contents .listWrap .pager.mobile > ul > li {
+    margin-left: 5%;
+  }
+  .contents .listWrap .pager.mobile > ul > li.prevBtn {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  html {
+    font-size: 35%;
+  }
+  header .headerWrap > .serchBox input {
+    margin-left: 5%;
+  }
 }
 /*# sourceMappingURL=list.css.map */
